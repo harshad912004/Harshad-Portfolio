@@ -1,7 +1,7 @@
 # 🚀 Harshad Dhongade | Personal Portfolio
 
 Welcome to my personal portfolio website!  
-This site showcases my **skills**, **projects**, **my tech journey**, **qualifications**, **certifications**, **testimonials**, and **contact information** in a clean, responsive, and interactive format.  
+This site showcases my **skills**, **projects**, **about**, **education**, **certifications**, **testimonials**, and **contact information** in a clean, responsive, and interactive format.  
 Designed for recruiters, collaborators, and fellow tech enthusiasts.
 
 ---
@@ -15,18 +15,17 @@ Designed for recruiters, collaborators, and fellow tech enthusiasts.
 
 - **Responsive design** (works great on mobile, tablet, desktop)
 - **Dark / Light mode toggle**
-- **Floating particles + scroll animations**
+- **Floating + scroll animations**
 - **Back-to-top button**
 - **Smooth scroll navigation**
 - **Sections:**
   - Home / Hero + intro
-  - Skills (Java full stack, data analysis, common tools)
-  - My Tech Journey
-  - Qualification timeline
+  - Skills (Data Analysis, Java full stack, common tools)
   - Projects grid (with live links)
+  - About + Personal vision
+  - Education timeline
   - Certifications grid (with previews)
   - Testimonials
-  - Personal vision
   - Contact form + social links
   - Footer with extra information
 
@@ -36,9 +35,7 @@ Designed for recruiters, collaborators, and fellow tech enthusiasts.
 
 - **HTML5 / CSS3 / TailwindCSS**
 - **JavaScript**
-- **Particles.js**
-- **Chart.js**
-- **AOS / ScrollReveal (optional scroll effects)**
+- **AOS / ScrollReveal (scroll effects)**
 
 ---
 
@@ -49,9 +46,8 @@ Designed for recruiters, collaborators, and fellow tech enthusiasts.
 ┣ 📂 Testimonials  
 ┣ HD_Photo_New.jpg  
 ┣ logo.png  
-┣ Harshad_Online_Main_Resume.pdf  
+┣ Harshad_Resume_DA.pdf  
 ┣ index.html  
-┣ script.js  
 ┣ style.js  
 
 ---
@@ -59,7 +55,7 @@ Designed for recruiters, collaborators, and fellow tech enthusiasts.
 ## 📌 How to Use / Deploy
 
 1️⃣ Clone or fork this repo:  
-git clone https://github.com/harshad912004/Harshad_Portfolio.git  
+git clone https://github.com/harshad912004/Harshad-Portfolio.git  
 
 2️⃣ Open index.html in your browser OR deploy via GitHub Pages:  
 Go to Settings > Pages  
@@ -72,8 +68,8 @@ Save and wait for your site to go live!
 
 📬 Contact  
 If you'd like to connect, feel free to:  
-💌 harshaddhongade0901@example.com  
-💌 harshaddhongade9124@example.com  
+💌 Gmail1 - harshaddhongade0901@example.com  
+💌 Gmail2 - harshaddhongade9124@example.com  
 🔗 LinkedIn - https://www.linkedin.com/in/harshad-dhongade  
 🔗 GitHub - https://github.com/harshad912004  
 
@@ -85,11 +81,9 @@ This portfolio is open for learning purposes. You’re welcome to reference its 
 ---
 
 🙌 Acknowledgments  
-TailwindCSS  
-Particles.js  
-Chart.js  
-AOS  
-All the amazing open-source tools used  
+ - TailwindCSS
+ - AOS
+ - All the amazing open-source tools used  
 
 ---
 
