@@ -4,815 +4,1042 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harshad Dhongade | Portfolio</title>
+  <title>Harshad Dhongade | Data Analyst</title>
   <link rel="icon" href="logo.png" type="image/png">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <link href="style.css" rel="stylesheet">
-  <script src="script.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <style>
+    .nav-link {
+      @apply text-white hover:text-orange-400 relative transition duration-300;
+    }
+
+    .nav-link::after {
+      content: '';
+      @apply absolute left-0 bottom-[-4px] w-0 h-[2px] bg-orange-400 transition-all duration-300;
+    }
+
+    .nav-link:hover::after {
+      @apply w-full;
+    }
+
+    .mobile-link {
+      @apply text-white hover:text-orange-400 text-base font-medium transition duration-300;
+    }
+  </style>
+
 </head>
 
 <body class="bg-gray-900 text-white font-sans">
-  <div id="particles-js" class="fixed w-full h-full -z-10 top-0 left-0 -z-10"></div>
 
-  <!-- Navbar -->
-  <nav class="w-full fixed top-0 bg-gray-800 shadow-lg z-50">
+  <!--===== START: NAVBAR SECTION =====-->
+  <nav
+    class="w-full fixed top-0 bg-gray-900/90 backdrop-blur-md shadow-lg z-50 transition-all duration-300 ease-in-out">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-4xl font-bold text-red-400">Harshad Dhongade</h1>
-      <ul class="flex space-x-6 text-m">
-        <li><a href="index.html" class="text-white white:text-white hover:text-red-400 transition duration-300">Home</a>
-        </li>
-        <li><a href="#skills" class="text-white white:text-white hover:text-red-400 transition duration-300">Skills</a>
-        </li>
-        <li><a href="#tech_journey" class="text-white white:text-white hover:text-red-400 transition duration-300">My
-            Tech Journey</a></li>
-        <li><a href="#qualification"
-            class="text-white white:text-white hover:text-red-400 transition duration-300">Qualification</a></li>
-        <li><a href="#projects"
-            class="text-white white:text-white hover:text-red-400 transition duration-300">Projects</a></li>
-        <li><a href="#certifications"
-            class="text-white white:text-white hover:text-red-400 transition duration-300">Certifications</a></li>
-        <li><a href="#testimonials"
-            class="text-white white:text-white hover:text-red-400 transition duration-300">Testimonials</a></li>
-        <li><a href="#contact" class="text-white white:text-white hover:text-red-400 transition duration-300">Contact
-            Me</a></li>
-        <li><button onclick="myFunction()"
-            class="inline-block px-4 py-1 border border-red-600 white:border-red-400 text-white white:text-white hover:bg-red-600 hover:text-white white:hover:bg-red-400 white:hover:text-white transition duration-300 rounded-full">Toggle</button>
-        </li>
+
+      <!-- Logo -->
+      <h1
+        class="text-3xl md:text-4xl font-extrabold text-orange-400 hover:text-orange-300 transition duration-300 cursor-pointer tracking-wide">
+        Harshad <span class="text-white">|</span> Data Analyst
+      </h1>
+
+      <!-- Desktop Menu -->
+      <ul id="navLinks" class="hidden md:flex space-x-6 text-sm lg:text-base font-medium">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact Me</a></li>
       </ul>
+
+      <!-- Resume Button -->
+      <a href="Harshad_Resume_DA.pdf" download
+        class="hidden md:inline-block px-4 py-1.5 border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-gray-900 transition duration-300 rounded-full font-semibold shadow-md hover:shadow-orange-500/30">
+        Resume <i class="fas fa-download ml-1"></i>
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuToggle"
+        class="md:hidden text-orange-400 text-2xl focus:outline-none hover:text-orange-300 transition">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu"
+      class="hidden flex flex-col items-center bg-gray-900 border-t border-gray-700 py-4 space-y-3 md:hidden">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#about" class="mobile-link">About Me</a>
+      <a href="#education" class="mobile-link">Education</a>
+      <a href="#certifications" class="mobile-link">Certifications</a>
+      <a href="#contact" class="mobile-link">Contact Me</a>
+      <a href="Harshad_Resume_DA.pdf" download
+        class="mt-2 inline-block px-4 py-1.5 border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-gray-900 rounded-full font-semibold transition duration-300">
+        Resume <i class="fas fa-download ml-1"></i>
+      </a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="h-screen flex items-center justify-center px-4">
-    <div class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-      <!-- Left Content -->
-      <div data-aos="fade-right">
-        <h2 class="text-5xl md:text-5xl font-extrabold mb-5">Hello, I'm Harshad</h2>
-        <p class="text-lg text-green-600 white:text-green-300 mb-3">Data Analyst | Java Web Developer</p>
-        <p class="mb-2">Skilled in collecting, cleaning, and visualizing real-world datasets using Excel, Python, Power
-          BI and SQL to uncover actionable insights and support strategic decision-making.</p>
-        <p class="mb-2">I've also built full-stack web applications using Java, JSP/Servlet, MySQL, and responsive UIs
-          with HTML, CSS, JavaScript, and TailwindCSS.</p>
-        <div class="flex space-x-4">
-          <!-- Contact Button -->
+  <!--===== START: HERO SECTION =====-->
+  <section id="hero"
+    class="min-h-screen pt-28 pb-16 flex items-center justify-center px-6 md:px-10 bg-gradient-to-b from-gray-900 via-gray-950 to-black relative overflow-hidden">
+
+    <!-- Container -->
+    <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+      <!-- Left: Text Content -->
+      <div data-aos="fade-right" data-aos-duration="1000" class="text-center md:text-left">
+        <p class="text-xl md:text-2xl font-medium text-orange-400 mb-3 tracking-wide">
+          Hello, I'm <span class="font-bold">Harshad Dhongade</span>
+        </p>
+
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-white">
+          A Data Analyst <br class="hidden sm:block">
+          <span class="text-orange-400">Driving Decisions</span> with Data.
+        </h2>
+
+        <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
+          Skilled in collecting, cleaning, and visualizing real-world datasets using
+          <span class="text-orange-400 font-semibold">Python</span>,
+          <span class="text-orange-400 font-semibold">SQL</span>, and
+          <span class="text-orange-400 font-semibold">Power BI</span>
+          to uncover actionable insights and enable data-driven decision-making.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4 sm:gap-6 mt-6">
           <a href="#contact"
-            class="px-6 py-3 border border-green-600 white:border-green-400 hover:bg-green-600 hover:text-white white:hover:bg-green-400 white:hover:text-white transition duration-300 rounded-full">
-            Contact Me</a>
-          <!-- Download CV Button -->
-          <a href="Harshad_Resume_4.pdf" download
-            class="px-6 py-3 border border-green-600 white:border-green-400 hover:bg-green-600 hover:text-white white:hover:bg-green-400 white:hover:text-white transition duration-300 rounded-full">
-            Download CV</a>
+            class="px-8 py-3 border border-orange-500 text-orange-400 font-semibold rounded-full transition-all duration-300 hover:bg-orange-500 hover:text-gray-900 shadow-lg hover:shadow-orange-500/30 transform hover:scale-105">
+            Get in Touch
+          </a>
+          <a href="Harshad_Resume_DA.pdf" download
+            class="px-8 py-3 border border-orange-500 text-orange-400 font-semibold rounded-full transition-all duration-300 hover:bg-orange-500 hover:text-gray-900 hover:shadow-orange-500/30">
+            Download CV <i class="fas fa-download ml-2"></i>
+          </a>
         </div>
       </div>
-      <!-- Right Image -->
-      <div class="flex justify-center md:justify-end" data-aos="fade-left">
-        <img src="HD_Photo_New.jpg" alt="Profile" class="w-80 h-80 rounded-lg shadow-lg object-cover">
+
+      <!-- Right: Profile Image -->
+      <div class="flex justify-center md:justify-end relative" data-aos="fade-left" data-aos-duration="1000">
+        <div
+          class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-2xl group border-4 border-transparent bg-gradient-to-tr from-orange-500 to-yellow-400 p-[3px] transition-all duration-500 hover:scale-105 hover:shadow-orange-500/40">
+          <img src="HD_Photo_New.jpg" alt="Harshad Dhongade Profile Photo"
+            class="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-700 ease-out">
+        </div>
+
+        <!-- Subtle background glow -->
+        <div class="absolute -z-10 w-80 h-80 sm:w-96 sm:h-96 bg-orange-500/10 blur-3xl rounded-full"></div>
       </div>
+
     </div>
   </section>
 
-  <hr class="mt-4 mb-8 border-t-2 w-11/12 mx-auto">
+  <hr class="mt-4 mb-16 border-t-1 border-gray-700 w-11/12 mx-auto">
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-20">
-    <div class="max-w-7xl mx-auto" data-aos="fade-down">
-      <h1 class="text-5xl font-bold text-center mb-12">Skills</h1>
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Java Web Development -->
-        <div class="bg-white white:bg-gray-900 border border-green-600 rounded-lg p-6 shadow-lg" data-aos="fade-right">
-          <h3 class="text-2xl font-semibold mb-4 text-center text-red-600 dark:text-red-400">Java Web Development</h3>
-          <div>
-            <h4 class="font-medium text-black dark:text-black">Frontend:</h4>
-            <ul class="list-none space-y-1 text-gray-600 dark:text-gray-400">
-              <li><i class="fab fa-html5 mr-2"></i>HTML</li>
-              <li><i class="fab fa-css3-alt mr-2"></i>CSS</li>
-              <li><i class="fab fa-js mr-2"></i>JavaScript</li>
-            </ul>
-            <h4 class="mt-4 font-medium text-black dark:text-black">Backend:</h4>
-            <ul class="list-none space-y-1 text-gray-600 dark:text-gray-400">
-              <li><i class="fab fa-java mr-2"></i>Java</li>
-              <li><i class="fab fa-book mr-2"></i>OOP</li>
-              <li><i class="fas fa-server mr-2"></i>JSP/Servlet</li>
-              <li><i class="fas fa-database mr-2"></i>JDBC</li>
-              <li><i class="fas fa-database mr-2"></i>MySQL</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Data Analysis -->
-        <div class="bg-white dark:bg-gray-900 border border-green-600 rounded-lg p-6 shadow-lg" data-aos="fade-up">
-          <h3 class="text-2xl font-semibold mb-4 text-center text-red-600 dark:text-red-400">Data Analysis</h3>
-          <div class="grid grid-cols-2 gap-4">
-            <ul class="list-none space-y-1 text-gray-600 dark:text-gray-400">
-              <li><i class="fas fa-file-excel mr-2"></i>Microsoft Excel</li>
-              <li><i class="fab fa-python mr-2"></i>Python</li>
-              <li><i class="fas fa-database mr-2"></i>SQL</li>
-              <li><i class="fas fa-chart-bar mr-2"></i>Microsoft Power BI</li>
-              <li><i class="fas fa-square-root-alt mr-2"></i>Mathematics</li>
-              <li><i class="fas fa-percent mr-2"></i>Statistics</li>
-              <li><i class="fas fa-percentage mr-2"></i>Probability</li>
-            </ul>
-            <ul class="list-none space-y-1 text-gray-600 dark:text-gray-400">
-              <li><i class="fas fa-database mr-2"></i>Data Collection</li>
-              <li><i class="fas fa-broom mr-2"></i>Data Cleaning</li>
-              <li><i class="fas fa-search mr-2"></i>Data Analysing</li>
-              <li><i class="fas fa-cogs mr-2"></i>Data Processing</li>
-              <li><i class="fas fa-chart-line mr-2"></i>Data Visualisation</li>
-              <li><i class="fas fa-chalkboard-teacher mr-2"></i>Presentation</li>
-              <li><i class="fas fa-book-open mr-2"></i>Story Telling</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Common Tools and Technologies -->
-        <div class="bg-white dark:bg-gray-900 border border-green-600 rounded-lg p-6 shadow-lg" data-aos="fade-left">
-          <h3 class="text-2xl font-semibold mb-4 text-center text-red-600 dark:text-red-400">Common Tools</h3>
-          <ul class="list-none space-y-1 text-gray-600 dark:text-gray-400">
-            <li><i class="fab fa-book mr-2"></i></i>DSA</li>
-            <li><i class="fab fa-globe mr-2"></i>Artificial Intelligence</li>
-            <li><i class="fab fa-rocket mr-2"></i>Machine Learning</li>
-            <li><i class="fab fa-github mr-2"></i>GitHub</li>
-            <li><i class="fas fa-code mr-2"></i>Eclipse</li>
-            <li><i class="fas fa-flask mr-2"></i>Anaconda / Jupyter Notebook</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="mt-4 mb-8 border-t-2 w-11/12 mx-auto">
-
-  <!-- My Tech Journey & Vision Section -->
-  <section id="tech_journey" class="py-20">
-    <div class="max-w-7xl mx-auto text-center" data-aos="fade-down">
-      <h2 class="text-5xl font-bold mb-6">My Tech Journey & Vision</h2>
-      <p class="text-lg text-green-600 mb-8 animate-fade-in">
-        From writing simple Java programs to building data dashboards, my journey is fueled by curiosity and a love for
-        technology.
-        I aim to turn data into stories that guide decisions.
-        My vision is to grow as a Data Analyst who bridges code, data, and real-world impact.
-      </p>
-      <!-- Skills Bar Chart -->
-      <div class="bg-white border border-green-600 rounded-lg p-6 shadow-lg">
-        <canvas id="skillsChart" width="850px" height="300px"></canvas>
-      </div>
-    </div>
-  </section>
-
-  <hr class="mt-4 mb-8 border-t-2 w-11/12 mx-auto">
-
-  <!-- Qualification Section -->
-  <section id="qualification" class="py-20 px-7">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-5xl font-bold text-center mb-12" data-aos="fade-down">Qualification</h2>
-      <div class="space-y-8 bg-white dark:bg-gray-900 border border-green-600 rounded-lg p-6 shadow-lg"
-        data-aos="zoom-in-up">
-        <div class="border-l-4 border-red-500 pl-4">
-          <h3 class="text-xl font-semibold text-red-600 dark:text-red-400">Master's Degree in Computer Application</h3>
-          <p class="text-black dark:text-black">MET Institute of Engineering (SPPU) - Maharashtra, India</p>
-          <p class="text-sm text-black">2024 - 2026</p>
-        </div>
-        <div class="border-l-4 border-red-500 pl-4">
-          <h3 class="text-xl font-semibold text-red-600 dark:text-red-400">Bachelor's Degree in Computer Science</h3>
-          <p class="text-black dark:text-black">Gokhale Education Society (SPPU) - Maharashtra, India</p>
-          <p class="text-sm text-black">2021 - 2024 | 8.72 CGPA | Final Grade A+</p>
-        </div>
-        <div class="border-l-4 border-red-500 pl-4">
-          <h3 class="text-xl font-semibold text-red-600 dark:text-red-400">12th HSC</h3>
-          <p class="text-black dark:text-black">Maharashtra State Board, Pune</p>
-          <p class="text-sm text-black">2020 - 2021 | 79.83%</p>
-        </div>
-        <div class="border-l-4 border-red-500 pl-4">
-          <h3 class="text-xl font-semibold text-red-600 dark:text-red-400">10th SSC</h3>
-          <p class="text-black dark:text-black">Maharashtra State Board, Pune</p>
-          <p class="text-sm text-black">2018 - 2019 | 77.00%</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="mt-4 mb-8 border-t-2 w-11/12 mx-auto">
-
-  <!-- Projects Section-->
-  <section id="projects" class="py-20 px-6">
+  <!--===== START: SKILLS SECTION =====-->
+  <section id="skills"
+    class="py-20 px-4 md:px-8 bg-gradient-to-b from-gray-900 via-gray-950 to-black relative overflow-hidden">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-5xl font-bold text-center mb-12" data-aos="fade-down">Projects</h2>
-      <div class="relative">
-        <!-- Left Button -->
-        <button onclick="scrollProjects(-1)"
-          class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center z-10 shadow hover:bg-red-700">
-          <i class="fas fa-chevron-left"></i>
-        </button>
 
-        <!-- Slider -->
-        <div id="projectsSlider" class="flex gap-10 overflow-x-auto scroll-smooth py-4 px-4 scrollbar-hide">
-          <!-- Card: Mental Health Analysis - Education -->
-          <div
-            class="flex-shrink-0 w-80 h-70 bg-white dark:bg-gray-800 border border-green-600 rounded-lg shadow-lg flex flex-col"
-            data-aos="flip-right">
-            <img src="Projects/Finance_Dashboard.png" alt="Mental Health Analysis Finance Dashboard"
-              class="w-full h-64 object-fit border border-green-600 rounded-t-lg">
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-red-600 dark:text-red-400">Mental Health Analysis - Finance</h3>
-              <p class="text-sm text-gray-700 dark:text-gray-300 mb-3">Power BI + Python project on mental health
-                indicators</p>
-              <div class="flex space-x-3 text-sm">
-                <a href="https://harshad912004.github.io/Mental_Health_Analysis-Finance/" target="_blank"
-                  class="text-blue-600 hover:underline">🔗 Live Demo</a>
-                <a href="https://github.com/harshad912004/Mental_Health_Analysis-Finance" target="_blank"
-                  class="text-gray-600 hover:underline">💻 GitHub Repo</a>
-              </div>
+      <!-- Section Title -->
+      <h2 class="text-5xl font-bold text-center mb-16 text-white" data-aos="fade-down">
+        Skills & Tech Stack
+      </h2>
+
+      <!-- Skill Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+
+        <!-- Card 1 -->
+        <div
+          class="bg-gray-800/80 backdrop-blur-sm border border-gray-700 hover:border-orange-500 rounded-2xl p-8 shadow-lg hover:shadow-orange-500/30 transform hover:-translate-y-2 transition-all duration-500"
+          data-aos="fade-right" data-aos-delay="100">
+          <h3 class="text-3xl font-semibold mb-6 text-center text-orange-400">Core Data Stack</h3>
+          <div class="space-y-5">
+            <div>
+              <h4 class="font-bold text-lg text-white flex items-center border-b border-gray-700 pb-1">
+                <i class="fas fa-chart-area mr-3 text-orange-400"></i>Analytics & Visualization
+              </h4>
+              <ul class="mt-3 space-y-2 text-gray-300 text-lg">
+                <li><i class="fas fa-chart-bar mr-3 text-orange-500"></i><b>Power BI</b></li>
+                <li><i class="fas fa-file-excel mr-3 text-orange-500"></i><b>Excel</b> (Advanced)</li>
+                <li><i class="fas fa-database mr-3 text-orange-500"></i><b>SQL</b> (MySQL, SQLite)</li>
+                <li><i class="fas fa-calculator mr-3 text-orange-500"></i><b>Statistics</b></li>
+              </ul>
             </div>
           </div>
+        </div>
 
-          <!-- Card: Mental Health Analysis - Education -->
-          <div
-            class="flex-shrink-0 w-80 h-70 bg-white dark:bg-gray-800 border border-green-600 rounded-lg shadow-lg flex flex-col"
-            data-aos="flip-right">
-            <img src="Projects/Education_Dashboard.png" alt="Mental Health Analysis Education Dashboard"
-              class="w-full h-64 object-fit border border-green-600 rounded-t-lg">
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-red-600 dark:text-red-400">Mental Health Analysis - Education</h3>
-              <p class="text-sm text-gray-700 dark:text-gray-300 mb-3">Power BI + Python project on mental health
-                indicators</p>
-              <div class="flex space-x-3 text-sm">
-                <a href="https://harshad912004.github.io/Mental_Health_Analysis-Education/" target="_blank"
-                  class="text-blue-600 hover:underline">🔗 Live Demo</a>
-                <a href="https://github.com/harshad912004/Mental_Health_Analysis-Education" target="_blank"
-                  class="text-gray-600 hover:underline">💻 GitHub Repo</a>
-              </div>
+        <!-- Card 2 -->
+        <div
+          class="bg-gray-800/80 backdrop-blur-sm border border-gray-700 hover:border-orange-500 rounded-2xl p-8 shadow-lg hover:shadow-orange-500/30 transform hover:-translate-y-2 transition-all duration-500"
+          data-aos="fade-left" data-aos-delay="200">
+          <h3 class="text-3xl font-semibold mb-6 text-center text-orange-400">Data Science & Tools</h3>
+          <div class="space-y-5">
+            <div>
+              <h4 class="font-bold text-lg text-white flex items-center border-b border-gray-700 pb-1">
+                <i class="fas fa-cogs mr-3 text-orange-400"></i>Tools & Platforms
+              </h4>
+              <ul class="mt-3 space-y-2 text-gray-300 text-lg">
+                <li><i class="fab fa-python mr-3 text-orange-500"></i><b>Python</b> (Pandas, NumPy, Matplotlib)</li>
+                <li><i class="fas fa-flask mr-3 text-orange-500"></i><b>Machine Learning</b> (Concepts, Sklearn)</li>
+                <li><i class="fas fa-calculator mr-3 text-orange-500"></i><b>Mathematics</b></li>
+                <li><i class="fas fa-code mr-3 text-orange-500"></i><b>Jupyter / Anaconda</b></li>
+              </ul>
             </div>
           </div>
+        </div>
 
-          <!-- Card: Mental Health Analysis - Healthcare -->
-          <div
-            class="flex-shrink-0 w-80 h-70 bg-white dark:bg-gray-800 border border-green-600 rounded-lg shadow-lg flex flex-col"
-            data-aos="flip-right">
-            <img src="Projects/Healthcare_Dashboard.png" alt="Mental Health Analysis Healthcare Dashboard"
-              class="w-full h-64 object-fit border border-green-600 rounded-t-lg">
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-red-600 dark:text-red-400">Mental Health Analysis - Healthcare</h3>
-              <p class="text-sm text-gray-700 dark:text-gray-300 mb-3">Power BI + Python project on mental health
-                indicators</p>
-              <div class="flex space-x-3 text-sm">
-                <a href="https://harshad912004.github.io/Mental_Health_Analysis-Healthcare/" target="_blank"
-                  class="text-blue-600 hover:underline">🔗 Live Demo</a>
-                <a href="https://github.com/harshad912004/Mental_Health_Analysis-Healthcare" target="_blank"
-                  class="text-gray-600 hover:underline">💻 GitHub Repo</a>
-              </div>
+        <!-- Card 3 -->
+        <div
+          class="bg-gray-800/80 backdrop-blur-sm border border-gray-700 hover:border-orange-500 rounded-2xl p-8 shadow-lg hover:shadow-orange-500/30 transform hover:-translate-y-2 transition-all duration-500"
+          data-aos="fade-up" data-aos-delay="300">
+          <h3 class="text-3xl font-semibold mb-6 text-center text-orange-400">Programming & Fundamentals</h3>
+          <div class="space-y-5">
+            <div>
+              <h4 class="font-bold text-lg text-white flex items-center border-b border-gray-700 pb-1">
+                <i class="fas fa-code mr-3 text-orange-400"></i>Languages & Concepts
+              </h4>
+              <ul class="mt-3 space-y-2 text-gray-300 text-lg">
+                <li><i class="fab fa-java mr-3 text-orange-500"></i><b>Java</b> (OOP, Core)</li>
+                <li><i class="fas fa-book mr-3 text-orange-500"></i><b>DSA</b> (Data Structures & Algorithms)</li>
+                <li><i class="fab fa-github mr-3 text-orange-500"></i><b>Git / Version Control</b></li>
+              </ul>
             </div>
           </div>
+        </div>
 
-          <!-- Card: Hospital Patient Admission Analysis Dashboard -->
-          <div
-            class="flex-shrink-0 w-80 h-70 bg-white dark:bg-gray-800 border border-green-600 rounded-lg shadow-lg flex flex-col"
-            data-aos="flip-right">
-            <img src="Projects/HAAD_Dashboard.png" alt="Hospital Patient Admission Analysis Dashboard"
-              class="w-full h-64 object-fit border border-green-600 rounded-t-lg">
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-red-600 dark:text-red-400">Hospital Patient Admission Analysis
-                Dashboard</h3>
-              <p class="text-sm text-gray-700 dark:text-gray-300 mb-3">Excel-based dashboard analyzing patient
-                admissions, and healthcare outcomes.</p>
-              <div class="flex space-x-3 text-sm">
+        <!-- Card 4 -->
+        <div
+          class="bg-gray-800/80 backdrop-blur-sm border border-gray-700 hover:border-orange-500 rounded-2xl p-8 shadow-lg hover:shadow-orange-500/30 transform hover:-translate-y-2 transition-all duration-500"
+          data-aos="fade-up" data-aos-delay="400">
+          <h3 class="text-3xl font-semibold mb-6 text-center text-orange-400">Web Development Stack</h3>
+          <div class="space-y-5">
+            <div>
+              <h4 class="font-bold text-lg text-white flex items-center border-b border-gray-700 pb-1">
+                <i class="fas fa-globe mr-3 text-orange-400"></i>Full Stack Experience
+              </h4>
+              <ul class="mt-3 space-y-2 text-gray-300 text-lg">
+                <li><i class="fab fa-html5 mr-3 text-orange-500"></i><b>HTML5</b>, <b>CSS3</b>, <b>JavaScript</b></li>
+                <li><i class="fas fa-layer-group mr-3 text-orange-500"></i><b>TailwindCSS</b> / Responsive UI</li>
+                <li><i class="fas fa-server mr-3 text-orange-500"></i><b>Java Backend</b> (JDBC, JSP / Servlet)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="mt-4 mb-16 border-t-1 border-gray-700 w-11/12 mx-auto">
+
+  <!--===== START: PROJECTS SECTION =====-->
+  <section id="projects" class="py-20 px-4 md:px-8 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-16 text-white tracking-tight" data-aos="fade-down">
+        Featured Projects
+      </h2>
+
+      <!-- Project Container -->
+      <div id="projectContainer" class="relative space-y-20">
+
+        <!-- === FIRST 3 PROJECTS (always visible) === -->
+        <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+          <div class="md:w-1/2">
+            <img src="Projects/Finance_Dashboard.png" alt="Finance Dashboard"
+              class="rounded-2xl shadow-2xl hover:scale-105 transition duration-300 w-full">
+          </div>
+          <div class="md:w-1/2 text-white">
+            <h3 class="text-2xl font-semibold text-orange-400 mb-3">Mental Health Analysis - Finance</h3>
+            <p class="text-gray-300 mb-4 leading-relaxed">
+              <strong>Impact:</strong> Visualized financial stress correlation with mental health using
+              <strong>Power BI</strong> & <strong>Python</strong>.
+            </p>
+            <div class="flex space-x-5 text-sm">
+              <a href="https://harshad912004.github.io/Mental_Health_Analysis-Finance/" target="_blank"
+                class="text-orange-400 hover:text-orange-300 hover:underline font-medium"><i
+                  class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
+              <a href="https://github.com/harshad912004/Mental_Health_Analysis-Finance" target="_blank"
+                class="text-gray-400 hover:text-white hover:underline"><i class="fab fa-github mr-1"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+          <div class="md:w-1/2">
+            <img src="Projects/Education_Dashboard.png" alt="Education Dashboard"
+              class="rounded-2xl shadow-2xl hover:scale-105 transition duration-300 w-full">
+          </div>
+          <div class="md:w-1/2 text-white">
+            <h3 class="text-2xl font-semibold text-orange-400 mb-3">Mental Health Analysis - Education</h3>
+            <p class="text-gray-300 mb-4 leading-relaxed">
+              <strong>Insight:</strong> Identified academic pressure indicators in student mental health using
+              <strong>Power BI</strong>.
+            </p>
+            <div class="flex space-x-5 text-sm">
+              <a href="https://harshad912004.github.io/Mental_Health_Analysis-Education/" target="_blank"
+                class="text-orange-400 hover:text-orange-300 hover:underline font-medium"><i
+                  class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
+              <a href="https://github.com/harshad912004/Mental_Health_Analysis-Education" target="_blank"
+                class="text-gray-400 hover:text-white hover:underline"><i class="fab fa-github mr-1"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+          <div class="md:w-1/2">
+            <img src="Projects/Healthcare_Dashboard.png" alt="Healthcare Dashboard"
+              class="rounded-2xl shadow-2xl hover:scale-105 transition duration-300 w-full">
+          </div>
+          <div class="md:w-1/2 text-white">
+            <h3 class="text-2xl font-semibold text-orange-400 mb-3">Mental Health Analysis - Healthcare</h3>
+            <p class="text-gray-300 mb-4 leading-relaxed">
+              <strong>Action:</strong> Cleaned and analyzed global healthcare data using
+              <strong>Python</strong> to visualize treatment access challenges.
+            </p>
+            <div class="flex space-x-5 text-sm">
+              <a href="https://harshad912004.github.io/Mental_Health_Analysis-Healthcare/" target="_blank"
+                class="text-orange-400 hover:text-orange-300 hover:underline font-medium"><i
+                  class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
+              <a href="https://github.com/harshad912004/Mental_Health_Analysis-Healthcare" target="_blank"
+                class="text-gray-400 hover:text-white hover:underline"><i class="fab fa-github mr-1"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- === HIDDEN PROJECTS (show when clicked) === -->
+        <div id="moreProjects" class="hidden opacity-0 transition-all duration-700 ease-in-out space-y-20">
+
+          <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+            <div class="md:w-1/2">
+              <img src="Projects/HAAD_Dashboard.png" alt="Hospital Admission Dashboard"
+                class="rounded-2xl shadow-2xl hover:scale-105 transition duration-300 w-full">
+            </div>
+            <div class="md:w-1/2 text-white">
+              <h3 class="text-2xl font-semibold text-orange-400 mb-3">Hospital Admission Analysis Dashboard</h3>
+              <p class="text-gray-300 mb-4 leading-relaxed">
+                <strong>Result:</strong> Built an <strong>Excel</strong> dashboard to track patient admissions and
+                optimize staff allocation.
+              </p>
+              <div class="flex space-x-5 text-sm">
                 <a href="https://harshad912004.github.io/Hospital_Patient_Admission_Analysis_Dashboard/" target="_blank"
-                  class="text-blue-600 hover:underline">🔗 Live Demo</a>
+                  class="text-orange-400 hover:text-orange-300 hover:underline font-medium"><i
+                    class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
                 <a href="https://github.com/harshad912004/Hospital_Patient_Admission_Analysis_Dashboard" target="_blank"
-                  class="text-gray-600 hover:underline">💻 GitHub Repo</a>
+                  class="text-gray-400 hover:text-white hover:underline"><i class="fab fa-github mr-1"></i> GitHub</a>
               </div>
             </div>
           </div>
 
-          <!-- Card: E-commerce Product Retail Dashboard -->
-          <div
-            class="flex-shrink-0 w-80 h-70 bg-white dark:bg-gray-800 border border-green-600 rounded-lg shadow-lg flex flex-col"
-            data-aos="flip-right">
-            <img src="Projects/EPRD.png" alt="E-commerce Product Retail Dashboard"
-              class="w-full h-64 object-fit border border-green-600 rounded-t-lg">
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-red-600 dark:text-red-400">E-commerce Product Retail Dashboard</h3>
-              <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">Excel dashboard visualizing sales trends, product
-                categories, and revenue insights for retail analysis.</p>
-              <div class="flex space-x-3 text-sm mt-2">
+          <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+            <div class="md:w-1/2">
+              <img src="Projects/EPRD.png" alt="E-commerce Retail Dashboard"
+                class="rounded-2xl shadow-2xl hover:scale-105 transition duration-300 w-full">
+            </div>
+            <div class="md:w-1/2 text-white">
+              <h3 class="text-2xl font-semibold text-orange-400 mb-3">E-commerce Retail Performance</h3>
+              <p class="text-gray-300 mb-4 leading-relaxed">
+                <strong>Analysis:</strong> Visualized sales trends and product categories using
+                <strong>Excel</strong> dashboard to guide inventory decisions.
+              </p>
+              <div class="flex space-x-5 text-sm">
                 <a href="https://harshad912004.github.io/Ecommerce_Product_Retail_Dashboard/" target="_blank"
-                  class="text-blue-600 hover:underline">🔗 Live Demo</a>
+                  class="text-orange-400 hover:text-orange-300 hover:underline font-medium"><i
+                    class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
                 <a href="https://github.com/harshad912004/Ecommerce_Product_Retail_Dashboard" target="_blank"
-                  class="text-gray-600 hover:underline">💻 GitHub Repo</a>
+                  class="text-gray-400 hover:text-white hover:underline"><i class="fab fa-github mr-1"></i> GitHub</a>
               </div>
             </div>
           </div>
 
-          <!-- Card: CyberGuardian -->
-          <div
-            class="flex-shrink-0 w-80 h-70 bg-white dark:bg-gray-800 border border-green-600 rounded-lg shadow-lg flex flex-col"
-            data-aos="flip-right">
-            <img src="Projects/Cyber_Guardian.png" alt="CyberGuardian"
-              class="w-full h-64 object-fit border border-green-600 rounded-t-lg">
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-red-600 dark:text-red-400">CyberGuardian</h3>
-              <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">Java full-stack platform offering cybersecurity
-                tutorials, quizzes, and secure user management.</p>
-              <div class="flex space-x-3 text-sm mt-2">
+          <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+            <div class="md:w-1/2">
+              <img src="Projects/Cyber_Guardian.png" alt="CyberGuardian Project"
+                class="rounded-2xl shadow-2xl hover:scale-105 transition duration-300 w-full">
+            </div>
+            <div class="md:w-1/2 text-white">
+              <h3 class="text-2xl font-semibold text-orange-400 mb-3">CyberGuardian (Java Full Stack)</h3>
+              <p class="text-gray-300 mb-4 leading-relaxed">
+                <strong>Tech Stack:</strong> Full-stack educational platform built using
+                <strong>Java (JSP/Servlet)</strong> and <strong>MySQL</strong>.
+              </p>
+              <div class="flex space-x-5 text-sm">
                 <a href="https://harshad912004.github.io/Cyber_Guardian/" target="_blank"
-                  class="text-blue-600 hover:underline">🔗 Live Demo</a>
+                  class="text-orange-400 hover:text-orange-300 hover:underline font-medium"><i
+                    class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
                 <a href="https://github.com/harshad912004/Cyber_Guardian" target="_blank"
-                  class="text-gray-600 hover:underline">💻 GitHub Repo</a>
+                  class="text-gray-400 hover:text-white hover:underline"><i class="fab fa-github mr-1"></i> GitHub</a>
               </div>
             </div>
           </div>
 
-          <!-- Card: Care Connect -->
-          <div
-            class="flex-shrink-0 w-80 h-70 bg-white dark:bg-gray-800 border border-green-600 rounded-lg shadow-lg flex flex-col"
-            data-aos="flip-right">
-            <img src="Projects/Care_Connect.png" alt="Care Connect"
-              class="w-full h-64 object-fit border border-green-600 rounded-t-lg">
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-red-600 dark:text-red-400">CareConnect</h3>
-              <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">Java-based web application streamlining
-                healthcare appointment scheduling and patient management.</p>
-              <div class="flex space-x-3 text-sm mt-2">
+          <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+            <div class="md:w-1/2">
+              <img src="Projects/Care_Connect.png" alt="CareConnect Project"
+                class="rounded-2xl shadow-2xl hover:scale-105 transition duration-300 w-full">
+            </div>
+            <div class="md:w-1/2 text-white">
+              <h3 class="text-2xl font-semibold text-orange-400 mb-3">CareConnect (Java Full Stack)</h3>
+              <p class="text-gray-300 mb-4 leading-relaxed">
+                <strong>Tech Stack:</strong> Full-stack healthcare platform built using
+                <strong>Java (JSP/Servlet)</strong> and <strong>MySQL</strong>.
+              </p>
+              <div class="flex space-x-5 text-sm">
                 <a href="https://harshad912004.github.io/Care-Connect/src/main/webapp/index.html" target="_blank"
-                  class="text-blue-600 hover:underline">🔗 Live Demo</a>
+                  class="text-orange-400 hover:text-orange-300 hover:underline font-medium"><i
+                    class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
                 <a href="https://github.com/harshad912004/Care-Connect" target="_blank"
-                  class="text-gray-600 hover:underline">💻 GitHub Repo</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card: Netflix Clone -->
-          <div
-            class="flex-shrink-0 w-80 h-70 bg-white dark:bg-gray-800 border border-green-600 rounded-lg shadow-lg flex flex-col"
-            data-aos="flip-right">
-            <img src="Projects/Netflix_Clone.png" alt="Netflix Clone"
-              class="w-full h-64 object-fit border border-green-600 rounded-t-lg">
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-red-600 dark:text-red-400">Netflix Clone</h3>
-              <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">Responsive web app replicating Netflix UI with
-                dynamic content display and smooth navigation.</p>
-              <div class="flex space-x-3 text-sm mt-2">
-                <a href="https://harshad912004.github.io/Netflix-Clone/" target="_blank"
-                  class="text-blue-600 hover:underline">🔗 Live Demo</a>
-                <a href="https://github.com/harshad912004/Netflix-Clone" target="_blank"
-                  class="text-gray-600 hover:underline">💻 GitHub Repo</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card: Amazon Clone -->
-          <div
-            class="flex-shrink-0 w-80 h-70 bg-white dark:bg-gray-800 border border-green-600 rounded-lg shadow-lg flex flex-col"
-            data-aos="flip-right">
-            <img src="Projects/Amazon_Clone.png" alt="Amazon Clone"
-              class="w-full h-64 object-fit border border-green-600 rounded-t-lg">
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-red-600 dark:text-red-400">Amazon Clone</h3>
-              <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">Responsive web app replicating Amazon UI with
-                dynamic content display and smooth navigation.</p>
-              <div class="flex space-x-3 text-sm mt-2">
-                <a href="https://harshad912004.github.io/Amazon_Clone/" target="_blank"
-                  class="text-blue-600 hover:underline">🔗 Live Demo</a>
-                <a href="https://github.com/harshad912004/Amazon_Clone" target="_blank"
-                  class="text-gray-600 hover:underline">💻 GitHub Repo</a>
+                  class="text-gray-400 hover:text-white hover:underline"><i class="fab fa-github mr-1"></i> GitHub</a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right Button -->
-        <button onclick="scrollProjects(1)"
-          class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center z-10 shadow hover:bg-red-700">
-          <i class="fas fa-chevron-right"></i>
-        </button>
+        <!-- === View More Button === -->
+        <div class="flex justify-center pt-10">
+          <button id="toggleProjectsBtn"
+            class="px-8 py-3 bg-orange-600 text-white font-medium rounded-full hover:bg-orange-500 hover:shadow-lg hover:shadow-orange-500/40 transition duration-300">
+            View More Projects ↓
+          </button>
+        </div>
+
       </div>
     </div>
   </section>
-
-  <hr class="mt-4 mb-8 border-t-2 w-11/12 mx-auto">
-
-  <!-- Certifications Section -->
-  <section id="certifications" class="py-20 px-6 dark:bg-gray-900">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-5xl font-bold text-center mb-12" data-aos="fade-down">Certifications</h2>
-      <!-- Certifications cards grid -->
-      <div id="certGrid" class="grid md:grid-cols-3 sm:grid-cols-2 gap-8">
-        <!-- JS will inject certification cards here -->
-      </div>
-
-      <!-- Pagination buttons -->
-      <div id="certPagination" class="flex justify-center mt-6 space-x-2 relative z-50">
-        <!-- JS will inject buttons here -->
-      </div>
-    </div>
-  </section>
-
-  <hr class="mt-4 mb-8 border-t-2 w-11/12 mx-auto">
-
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="py-20 px-6 dark:bg-gray-900">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-5xl font-bold text-center mb-12" data-aos="fade-down">Testimonials</h2>
-      <div class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <!-- Testimonial Card 1 -->
-        <div
-          class="bg-white dark:bg-gray-800 border border-green-600 rounded-lg overflow-hidden shadow-lg p-6 text-right transition duration-300"
-          data-aos="flip-down">
-          <img src="Testimonials/P_Jadhav_Sir.jpg" alt="Teacher 1"
-            class="w-24 h-24 mx-auto rounded-full mb-4 object-fit border border-green-600">
-          <p class="text-sm text-center text-gray-600 dark:text-gray-400">
-            "I’ve seen Harshad grow into a skilled and confident developer who isn’t afraid to explore new technologies.
-            His work ethic and integrity are impressive."</p><br>
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Prof. P. D. Jadhav</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Professor of Masters of Computer Application</p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">At MET Institute of Engineering</p>
-        </div>
-
-        <!-- Testimonial Card 2 -->
-        <div
-          class="bg-white dark:bg-gray-800 border border-green-600 rounded-lg overflow-hidden shadow-lg p-6 text-right transition duration-300"
-          data-aos="flip-down">
-          <img src="Testionials/M_Khond_Maam.jpg" alt="Teacher 2"
-            class="w-24 h-24 mx-auto rounded-full mb-4 object-fit border border-green-600">
-          <p class="text-sm text-center text-gray-600 dark:text-gray-400">
-            "Harshad shows a rare balance of technical mastery and a willingness to help peers.
-            His passion for problem-solving sets him apart."</p><br>
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Prof. M. Khond</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Professor of Masters of Computer Application</p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">At MET Institute of Engineering</p>
-        </div>
-
-        <!-- Testimonial Card 3 -->
-        <div
-          class="bg-white dark:bg-gray-800 border border-green-600 rounded-lg overflow-hidden shadow-lg p-6 text-right transition duration-300"
-          data-aos="flip-down">
-          <img src="Testimonials/J_Attar_Sir.jpg" alt="Teacher 3"
-            class="w-24 h-24 mx-auto rounded-full mb-4 object-fit border border-green-600">
-          <p class="text-sm text-center text-gray-600 dark:text-gray-400">
-            "Harshad’s enthusiasm for technology, especially in full-stack development and data analysis, is inspiring.
-            He brings creativity and precision to every task he undertakes."</p><br>
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Prof. J. Attar</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Professor of Masters of Computer Application</p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">At MET Institute of Engineering</p>
-        </div>
-
-        <!-- Testimonial Card 4 -->
-        <div
-          class="bg-white dark:bg-gray-800 border border-green-600 rounded-lg overflow-hidden shadow-lg p-6 text-right transition duration-300"
-          data-aos="flip-down">
-          <img src="Testimonials/M_Khan_Sir.jpg" alt="Teacher 4"
-            class="w-24 h-24 mx-auto rounded-full mb-4 object-fit border border-green-600">
-          <p class="text-sm text-center text-gray-600 dark:text-gray-400">
-            "It’s rare to encounter a student like Harshad, who combines technical proficiency with excellent
-            communication and leadership skills.
-            He is always eager to learn and take on challenges."</p><br>
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Prof. M. Khan</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Professor of Masters of Computer Application</p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">At MET Institute of Engineering</p>
-        </div>
-
-        <!-- Testimonial Card 5 -->
-        <div
-          class="bg-white dark:bg-gray-800 border border-green-600 rounded-lg overflow-hidden shadow-lg p-6 text-right transition duration-300"
-          data-aos="flip-down">
-          <img src="Testimonials/P_Malani_Sir.jpg" alt="Teacher 5"
-            class="w-24 h-24 mx-auto rounded-full mb-4 object-fit border border-green-600">
-          <p class="text-sm text-center text-gray-600 dark:text-gray-400">
-            "Harshad has consistently demonstrated exceptional dedication, analytical thinking, and technical expertise
-            in both his academic and project work.
-            His ability to quickly grasp complex concepts and deliver results is truly commendable."</p><br>
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Prof. P. Malani</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Professor of Masters of Computer Science</p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">At K.K.Wagh Agriculture College</p>
-        </div>
-
-        <!-- Testimonial Card 6 -->
-        <div
-          class="bg-white dark:bg-gray-800 border border-green-600 rounded-lg overflow-hidden shadow-lg p-6 text-right transition duration-300"
-          data-aos="flip-down">
-          <img src="Testimonials/Y_Sonawane_Maam.jpg" alt="Teacher 6"
-            class="w-24 h-24 mx-auto rounded-full mb-4 object-fit border border-green-600">
-          <p class="text-sm text-center text-gray-600 dark:text-gray-400">
-            "Harshad is a focused and motivated learner who has impressed us with his innovative solutions and
-            collaborative spirit.
-            His contributions to class projects have always stood out."</p><br>
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Ass. Prof. Y. Sonawane</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Professor of Masters of Computer Application</p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">At Gokhale Educatin Society</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="mt-4 mb-8 border-t-2 w-11/12 mx-auto">
-
-  <!-- Contact Me Section -->
-  <section id="contact" class="py-10 px-6">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-5xl font-bold mb-4" data-aos="fade-down">Contact Me</h2>
-      <div class="space-y-4 bg-white dark:bg-gray-900 border border-green-600 rounded-lg p-6 shadow-lg"
-        data-aos="zoom-in">
-        <p class="text-green-600 dark:text-green-300">Feel free to reach out via emails. You can also leave a message
-          below!</p>
-
-        <!-- Contact Info -->
-        <div class="mb-1 space-y-2 text-black dark:text-black">
-          <p><strong>Email:</strong> <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=harshaddhongade0901@example.com&su=Hello%20Harshad&body=I%20saw%20your%20portfolio%20and%20wanted%20to%20connect."><i
-                class="fas fa-envelope mr-1"></i>harshaddhongade0901@gmail.com</a></p>
-          <p><strong>Email:</strong> <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=harshaddhongade9214@example.com&su=Hello%20Harshad&body=I%20saw%20your%20portfolio%20and%20wanted%20to%20connect."><i
-                class="fas fa-envelope mr-1"></i>harshaddhongade9124@gmail.com</a></p>
-        </div>
-
-        <!-- Contact Form -->
-        <form class="space-y-6 max-w-xl mx-auto">
-          <input type="text" placeholder="Your Name"
-            class="w-full px-4 py-3 rounded-md border border-gray-600 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-800 dark:text-white focus:outline-none"
-            required>
-          <input type="email" placeholder="Your Email"
-            class="w-full px-4 py-3 rounded-md border border-gray-600 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-800 dark:text-white focus:outline-none"
-            required>
-          <textarea rows="4" placeholder="Your Message"
-            class="w-full px-4 py-3 rounded-md border border-gray-600 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-800 dark:text-white focus:outline-none"
-            required></textarea>
-          <button type="submit" class="px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition">Send
-            Message</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer Section -->
-  <footer class="py-8 px-8 bg-gray-800 text-center relative z-10">
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-      <div>
-        <!-- Column 1: Name + Social + Copyright -->
-        <!-- Name -->
-        <h3 class="text-2xl font-bold text-red-600 dark:text-white mb-8">Harshad Dhongade</h3>
-
-        <!-- Social Links -->
-        <div class="flex justify-center space-x-6 text-green-600 dark:text-green-600 mb-8">
-          <a href="https://www.instagram.com/prisoner_of_mind_91/" target="_blank" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zm-5 2c2.8 0 5 2.2 5 5s-2.2 5-5 5-5-2.2-5-5 2.2-5 5-5zm0 2c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z" />
-            </svg>
-          </a>
-          <a href="https://github.com/harshad912004" target="_blank" aria-label="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M12 2C6.5 2 2 6.7 2 12.3c0 4.5 2.9 8.4 6.9 9.8.5.1.6-.2.6-.4v-1.5c-2.8.6-3.4-1.4-3.4-1.4-.5-1.1-1.2-1.3-1.2-1.3-1-.6.1-.6.1-.6 1.1.1 1.6 1.2 1.6 1.2 1 .1.4 1.1.9 1.3.2-.1.4-.3.7-.6-2.2-.3-4.5-1.2-4.5-5.2 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 3 1.1.9-.3 1.9-.5 2.9-.5s2 .2 2.9.5c2.1-1.4 3-1.1 3-1.1.6 1.5.2 2.6.1 2.9.7.8 1.1 1.8 1.1 3 0 4.1-2.3 4.9-4.5 5.2.3.3.6.7.6 1.4v2.1c0 .2.2.5.6.4 4-1.4 6.9-5.3 6.9-9.8C22 6.7 17.5 2 12 2z" />
-            </svg>
-          </a>
-          <a href="https://x.com/Harshad0901?t=oDWSWFh2v2YDZ4-cbd0JoA&s=09" target="_blank" aria-label="Twitter">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M19.6 7.5c.01.15.01.29.01.44 0 4.45-3.39 9.58-9.58 9.58-1.9 0-3.67-.56-5.15-1.51.26.03.52.04.79.04 1.58 0 3.04-.54 4.2-1.44-1.48-.03-2.73-1-3.16-2.34.21.04.43.06.65.06.31 0 .61-.04.9-.12-1.55-.31-2.71-1.68-2.71-3.32v-.04c.45.25.97.4 1.52.42a3.29 3.29 0 0 1-1.46-2.74c0-.6.16-1.17.44-1.65a9.39 9.39 0 0 0 6.8 3.44c-.05-.24-.08-.49-.08-.75a3.29 3.29 0 0 1 5.7-2.25 6.55 6.55 0 0 0 2.08-.8 3.28 3.28 0 0 1-1.44 1.81 6.56 6.56 0 0 0 1.89-.52 7.03 7.03 0 0 1-1.64 1.7z" />
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/in/harshad-dhongade" target="_blank" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M19 0h-14C2.2 0 1 1.2 1 2.6v18.8C1 22.8 2.2 24 4 24h14c1.8 0 3-1.2 3-2.6V2.6C22 1.2 20.8 0 19 0zM7.2 20.2H4.6V9.1h2.6v11.1zM5.9 7.8c-.9 0-1.5-.6-1.5-1.4s.6-1.4 1.5-1.4c.9 0 1.5.6 1.5 1.4s-.7 1.4-1.5 1.4zM20.2 20.2h-2.6v-5.4c0-1.3-.5-2.1-1.6-2.1-1 0-1.5.7-1.8 1.3-.1.2-.1.5-.1.8v5.4h-2.6s.03-8.8 0-9.7h2.6v1.4c.3-.4 1-1.1 2.4-1.1 1.8 0 3.2 1.2 3.2 3.9v5.5z" />
-            </svg>
-          </a>
-        </div>
-
-        <!-- Copyright -->
-        <p class="text-sm text-green-600 dark:text-green-600">© 2025 HD. All rights reserved.</p>
-      </div>
-
-      <!-- Column 2: Languages -->
-      <div>
-        <h3 class="text-2xl font-semibold text-red-600 dark:text-white mb-5">Languages</h3>
-        <ul class="space-y-1 text-green-600 dark:text-green-400">
-          <li>English</li>
-          <li>Hindi</li>
-          <li>Marathi</li>
-        </ul>
-      </div>
-
-      <!-- Column 3: Hobbies -->
-      <div>
-        <h3 class="text-2xl font-semibold text-red-600 dark:text-white mb-5">Hobbies</h3>
-        <ul class="space-y-1 text-green-600 dark:text-green-400">
-          <li>Playing Chess</li>
-          <li>Workout</li>
-          <li>Tree Plantation</li>
-          <li>Listening Songs</li>
-        </ul>
-      </div>
-
-      <!-- Column 4: Soft Skills -->
-      <div>
-        <h3 class="text-2xl font-semibold text-red-600 dark:text-white mb-5">Soft Skills</h3>
-        <ul class="space-y-1 text-green-600 dark:text-green-400">
-          <li>Analytical Thinking</li>
-          <li>Problem Solving</li>
-          <li>Teamwork / Solowork</li>
-          <li>Presentation / Storytelling</li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Back to Top Button -->
-  <button onclick="scrollToTop()" id="backToTop"
-    class="fixed bottom-5 right-5 w-12 h-12 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center shadow-lg transition duration-300 z-50">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24"
-      stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-    </svg>
-  </button>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <!-- Animation to -->
-  <script>
-    AOS.init({
-      duration: 1500,
-    });
-  </script>
-
-  <!-- Particles Background Animation -->
-  <script>
-    particlesJS('particles-js',
-      {
-        "particles": {
-          "number": { "value": 50 },
-          "color": { "value": "#ffffff" },
-          "shape": { "type": "circle" },
-          "opacity": { "value": 0.5 },
-          "size": { "value": 3 },
-          "move": { "enable": true, "speed": 2 }
-        },
-        "interactivity": {
-          "events": {
-            "onhover": { "enable": true, "mode": "repulse" }
-          }
-        }
-      });
-  </script>
 
   <script>
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
+    const btn = document.getElementById('toggleProjectsBtn');
+    const moreProjects = document.getElementById('moreProjects');
 
-    // Optional: Show/hide button when scrolled
-    const backToTopBtn = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        backToTopBtn.style.display = "block";
+    btn.addEventListener('click', () => {
+      const isHidden = moreProjects.classList.contains('hidden');
+
+      if (isHidden) {
+        // Show projects
+        moreProjects.classList.remove('hidden');
+        setTimeout(() => {
+          moreProjects.classList.remove('opacity-0');
+        }, 50);
+        btn.textContent = 'Show Less ↑';
       } else {
-        backToTopBtn.style.display = "none";
+        // Hide projects
+        moreProjects.classList.add('opacity-0');
+        setTimeout(() => {
+          moreProjects.classList.add('hidden');
+        }, 500);
+        btn.textContent = 'View More Projects ↓';
       }
     });
-
-    // Initially hide the button
-    backToTopBtn.style.display = "none";
   </script>
 
-  <!-- Chart.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <hr class="mt-4 mb-16 border-t-1 border-gray-700 w-11/12 mx-auto">
 
-  <!-- Chart Init -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var ctx = document.getElementById('skillsChart').getContext('2d');
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['Java', 'Python', 'SQL', 'Power BI', 'Excel', 'AI', 'ML', 'HTML', 'CSS'],
-          datasets: [{
-            label: 'Confidence (%)',
-            data: [80, 75, 85, 90, 83, 60, 65, 70, 65],
-            backgroundColor: 'rgba(220, 38, 38, 0.7)',
-            borderColor: 'rgba(220, 38, 38, 1)',
-            borderWidth: 1
-          }]
-        },
-        options: {
-          animation: {
-            duration: 1500,
-            easing: 'easeOutBounce'
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-              max: 100
-            }
-          }
-        }
-      });
-    });
-  </script>
+  <!--===== START: ABOUT SECTION =====-->
+  <section id="about" class="py-20 px-6 md:px-10 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-white tracking-tight" data-aos="fade-down">
+        About Me & Professional Vision
+      </h2>
 
-  <!-- Scroll-Project Side Button -->
-  <script>
-    function scrollProjects(direction) {
-      const slider = document.getElementById("projectsSlider");
-      slider.scrollBy({
-        left: 320 * direction,
-        behavior: 'smooth'
-      });
-    }
-  </script>
+      <div
+        class="bg-gray-800/60 border border-gray-700 rounded-2xl p-8 md:p-10 shadow-2xl backdrop-blur-sm hover:shadow-orange-500/20 transition duration-500"
+        data-aos="zoom-in">
 
-  <!-- Certifications Pagination -->
+        <div class="space-y-6 text-gray-300 text-left leading-relaxed">
+          <p class="text-base md:text-lg">
+            My journey is fueled by a passion for transforming raw data into
+            <span class="text-orange-400 font-semibold">compelling narratives</span>
+            and
+            <span class="text-orange-400 font-semibold">actionable business intelligence</span>.
+            Starting with core programming in <span class="text-orange-400">Java</span> and building full-stack web
+            applications,
+            I developed a strong foundation in
+            <span class="text-orange-400">logic, problem-solving, and system architecture</span>.
+          </p>
+
+          <p class="text-base md:text-lg">
+            This hybrid background gives me a unique edge: I don't just analyze data —
+            I understand the entire <span class="text-orange-400 font-semibold">technical pipeline</span> that generates
+            it,
+            from backend databases (<span class="text-orange-400">SQL</span>) to application logic (<span
+              class="text-orange-400">Java</span>).
+            My analytical work using <span class="text-orange-400">Python</span>,
+            <span class="text-orange-400">Power BI</span>, and
+            <span class="text-orange-400">Excel</span> always aims to deliver clear, data-driven insights that empower
+            strategic business decisions.
+          </p>
+
+          <p class="text-lg md:text-xl font-semibold text-orange-400 border-l-4 border-orange-500 pl-4 italic">
+            My vision is to grow as a Data Analyst who effectively bridges
+            <span class="text-white font-bold">technical capabilities with business impact</span>,
+            using data storytelling to accelerate organizational growth and innovation.
+          </p>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5 text-gray-300">
+          <div class="flex items-center space-x-3 bg-gray-900/40 p-4 rounded-lg hover:bg-gray-800/60 transition">
+            <i class="fas fa-brain text-orange-500 text-xl"></i>
+            <span class="font-medium">Analytical Thinking</span>
+          </div>
+          <div class="flex items-center space-x-3 bg-gray-900/40 p-4 rounded-lg hover:bg-gray-800/60 transition">
+            <i class="fas fa-hands-helping text-orange-500 text-xl"></i>
+            <span class="font-medium">Teamwork & Collaboration</span>
+          </div>
+          <div class="flex items-center space-x-3 bg-gray-900/40 p-4 rounded-lg hover:bg-gray-800/60 transition">
+            <i class="fas fa-comments text-orange-500 text-xl"></i>
+            <span class="font-medium">Data Storytelling & Presentation</span>
+          </div>
+          <div class="flex items-center space-x-3 bg-gray-900/40 p-4 rounded-lg hover:bg-gray-800/60 transition">
+            <i class="fas fa-lightbulb text-orange-500 text-xl"></i>
+            <span class="font-medium">Proactive Problem-Solving</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="mt-4 mb-16 border-t-1 border-gray-700 w-11/12 mx-auto">
+
+  <!--===== START: EDUCATION SECTION =====-->
+  <section id="education"
+    class="py-20 px-4 md:px-8 bg-gradient-to-b from-gray-900 via-gray-950 to-black relative overflow-hidden">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-5xl font-bold text-center mb-16 text-white" data-aos="fade-down">
+        Education & Academic Record
+      </h2>
+
+      <div class="relative bg-gray-800/80 border border-gray-700 rounded-2xl p-8 shadow-xl backdrop-blur-sm"
+        data-aos="zoom-in-up">
+
+        <!-- Timeline line -->
+        <div
+          class="absolute left-8 top-8 bottom-8 w-1 bg-gradient-to-b from-orange-500 to-orange-300 rounded-full hidden md:block">
+        </div>
+
+        <div class="space-y-12">
+
+          <!-- MCA -->
+          <div class="relative border-l-4 pl-10 md:pl-16 group" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="absolute w-5 h-5 bg-orange-500 rounded-full left-4 md:left-7 top-2 group-hover:scale-125 transition-transform duration-300">
+            </div>
+            <h3 class="text-2xl font-semibold text-orange-400">Master’s in Computer Application (MCA)</h3>
+            <p class="text-lg text-white font-medium mt-1">MET Institute of Engineering (SPPU) – Maharashtra, India</p>
+            <p class="text-base text-gray-400">2024 – 2026 | Focus: Advanced Data Analytics & Software Development</p>
+          </div>
+
+          <!-- BCS -->
+          <div class="relative border-l-4 pl-10 md:pl-16 group" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="absolute w-5 h-5 bg-orange-500 rounded-full left-4 md:left-7 top-2 group-hover:scale-125 transition-transform duration-300">
+            </div>
+            <h3 class="text-2xl font-semibold text-orange-400">Bachelor’s of Science in Computer Science (BSc. CS)</h3>
+            <p class="text-lg text-white font-medium mt-1">Gokhale Education Society (SPPU) – Maharashtra, India</p>
+            <p class="text-base text-gray-400">2021 – 2024 | <b>8.72 CGPA</b> | Final Grade: A+</p>
+          </div>
+
+          <!-- HSC -->
+          <div class="relative border-l-4 pl-10 md:pl-16 group" data-aos="fade-up" data-aos-delay="300">
+            <div
+              class="absolute w-5 h-5 bg-orange-500 rounded-full left-4 md:left-7 top-2 group-hover:scale-125 transition-transform duration-300">
+            </div>
+            <h3 class="text-xl font-semibold text-orange-400">Higher Secondary Certificate (HSC)</h3>
+            <p class="text-lg text-white font-medium mt-1">Gokhale Education Society - Maharashtra State Board,
+              Pune</p>
+            <p class="text-base text-gray-400">2020 – 2021 | 79.83%</p>
+          </div>
+
+          <!-- SSC -->
+          <div class="relative border-l-4 pl-10 md:pl-16 group" data-aos="fade-up" data-aos-delay="400">
+            <div
+              class="absolute w-5 h-5 bg-orange-500 rounded-full left-4 md:left-7 top-2 group-hover:scale-125 transition-transform duration-300">
+            </div>
+            <h3 class="text-xl font-semibold text-orange-400">Secondary School Certificate (SSC)</h3>
+            <p class="text-lg text-white font-medium mt-1">Purushottam English School - Maharashtra State Board, Pune
+            </p>
+            <p class="text-base text-gray-400">2018 – 2019 | 77.00%</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="mt-4 mb-16 border-t-1 border-gray-700 w-11/12 mx-auto">
+
+  <!--===== START: CERTIFICATIONS SECTION =====-->
+  <section id="certifications"
+    class="py-20 px-4 md:px-8 bg-gradient-to-b from-gray-900 via-gray-950 to-black relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Section Heading -->
+      <h2 class="text-5xl font-bold text-center mb-16 text-white" data-aos="fade-down">
+        Certifications & Specialized Training
+      </h2>
+
+      <!-- Certifications Grid -->
+      <div id="certGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10" data-aos="zoom-in-up">
+        <!-- Cards will be injected dynamically via JS -->
+      </div>
+
+      <!-- Pagination Buttons -->
+      <div id="certPagination" class="flex justify-center mt-12 space-x-3 relative z-10"></div>
+
+    </div>
+  </section>
+
+  <!--===== Certification Data =====-->
   <script>
-    const certData = [
-      { img: "Certificates/Certificate-NPTEL_Python_For_Data_Science.jpg", title: "NPTEL Python For Data Science", org: "NPTEL", date: "Oct 2025" },
-      { img: "Certificates/Certificate-MET_Code_Trace.jpg", title: "MET's SPARX Event Code Trace", org: "MET BKC IOE", date: "Sep 2025" },
-      { img: "Certificates/Certificate-SimpliLearn-Innovating_With_Google_Cloud_AI.jpg", title: "Innovating With Google Cloud AI", org: "SimpliLearn", date: "June 2025", link: "https://simpli.app.link/GGdvvJUesUb" },
-      { img: "Certificates/Certificate-SimpliLearn-Data_Analyst.jpg", title: "Data Analyst 101", org: "SimpliLearn", date: "June 2025", link: "https://simpli.app.link/nZk6CS8HoUb" },
-      { img: "Certificates/Certificate-SimpliLearn-PowerBI_For_Beginners.jpg", title: "PowerBI For Beginners", org: "SimpliLearn", date: "June 2025", link: "https://simpli.app.link/jjUYGw82nUb" },
-      { img: "Certificates/Certificate-SimpliLearn-Business_Analytics_With_Excel.jpg", title: "Business Analytics With Excel", org: "SimpleLearn", date: "June 2025", link: "https://simpli.app.link/aacbEMO9mUb" },
-      { img: "Certificates/Certificate-OfficeMaster-PowerBI.jpg", title: "Power BI Workshop For Data Analyst", org: "OfficeMaster", date: "June 2025", link: "https://certx.in/certificate/36a28147-6eed-47a5-8342-e5f926ebba61439530" },
-      { img: "Certificates/Certificate-OfficeMaster-Excel-With-AI.jpg", title: "Excel With AI Workshop For Data Analyst", org: "OfficeMaster", date: "June 2025", link: "https://certx.in/certificate/27e0774f-467d-45de-9d54-33382f67ff0e413638" },
-      { img: "Certificates/Certificate-IIT_SPOKEN-PYTHON.jpg", title: "Python 3.4.3 Training", org: "IIT Spoken Tutorials", date: "April 2025" },
-      { img: "Certificates/Certificate-IIT_SPOKEN-CPP.jpg", title: "CPP Training", org: "IIT Spoken Tutorials", date: "Dec 2024" },
-      { img: "Certificates/Certificate-SimpliLearn-Introduction_To_HTML.jpg", title: "Introduction To HTML", org: "SimpliLearn", date: "Aug 2024", link: "https://simpli.app.link/yvOhT3no1Lb" },
-      { img: "Certificates/Certificate-SimpliLearn-Introduction_To_Java.jpg", title: "Introduction To Java", org: "SimpliLearn", date: "Dec 2023", link: "https://simpli.app.link/n0PtHGmqpFb" },
-      { img: "Certificates/Certificate-SimpliLearn-Introduction_To_Mean_Stack.jpg", title: "Introduction To Mean Stack", org: "SimpliLearn", date: "May 2024", link: "https://simpli.app.link/dghMTcKyMJb" },
+    const certifications = [
+      {
+        title: "MET's SPARX Event Code Trace",
+        issuer: "MET BKC IOE",
+        date: "2025",
+        link: "https://drive.google.com/file/d/1GQFe_0jhQNemVTrmPUQZxQsPjIP6Jd7O/view?usp=sharing",
+        icon: "fas fa-chart-line"
+      },
+      {
+        title: "Python For Data Science",
+        issuer: "NPTEL",
+        date: "2025",
+        link: "https://drive.google.com/file/d/1i4ZMUkUFWb3dhvzcrVA1-GOg19eQ2NEF/view?usp=sharing",
+        icon: "fas fa-chart-line"
+      },
+      {
+        title: "Innovating with Google Cloud AI",
+        issuer: "SimpliLearn & Google Cloud",
+        date: "2025",
+        link: "https://simpli.app.link/GGdvvJUesUb",
+        icon: "fas fa-cloud"
+      },
+      {
+        title: "Data Analyst 101",
+        issuer: "SimpliLearn & Microsoft",
+        date: "2025",
+        link: "https://simpli.app.link/nZk6CS8HoUb",
+        icon: "fab fa-data"
+      },
+      {
+        title: "Power BI for Beginners",
+        issuer: "SimpliLearn & Microsoft",
+        date: "2025",
+        link: "https://simpli.app.link/jjUYGw82nUb",
+        icon: "fas fa-file-chart"
+      },
+      {
+        title: "Business Analytics With Excel",
+        issuer: "SimpliLearn & Microsoft",
+        date: "2025",
+        link: "https://simpli.app.link/aacbEMO9mUb",
+        icon: "fas fa-excel"
+      },
+      {
+        title: "Python 3.4.3 Training",
+        issuer: "IIT Spoken Tutorial",
+        date: "2025",
+        link: "https://drive.google.com/file/d/10UdXdaM45CnUG5ZufqZ3kGAYAbd4WASu/view?usp=sharing",
+        icon: "fas fa-python"
+      }
     ];
 
-    const perPage = 6;
+    // === Display Settings ===
+    const itemsPerPage = 3;
     let currentPage = 1;
 
-    function renderCertifications() {
-      const grid = document.getElementById('certGrid');
-      grid.innerHTML = '';
-      const start = (currentPage - 1) * perPage;
-      const end = start + perPage;
-      const certsToShow = certData.slice(start, end);
+    function displayCertifications(page) {
+      const certGrid = document.getElementById("certGrid");
+      certGrid.innerHTML = "";
+
+      const start = (page - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const certsToShow = certifications.slice(start, end);
 
       certsToShow.forEach(cert => {
-        grid.innerHTML += `
-        <div class="bg-white dark:bg-gray-800 border border-green-600 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
-          ${cert.link ? `<a href="${cert.link}" target="_blank">` : ``}
-          <img src="${cert.img}" alt="${cert.title}" class="w-full h-56 object-fit border-b border-green-600">
-          ${cert.link ? `</a>` : ``}
-          <div class="p-4 text-center">
-            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">${cert.title}</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">${cert.org} | ${cert.date}</p>
-          </div>
-        </div>`;
+        const card = document.createElement("div");
+        card.className = `
+            bg-gray-800/80 backdrop-blur-sm border border-gray-700 hover:border-orange-500
+            rounded-2xl p-8 shadow-lg hover:shadow-orange-500/30 transform hover:-translate-y-2
+            transition-all duration-500
+          `;
+        card.innerHTML = `
+            <div class="flex flex-col items-center text-center space-y-4">
+              <div class="text-orange-400 text-5xl mb-2">
+                <i class="${cert.icon}"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-white">${cert.title}</h3>
+              <p class="text-gray-400 text-lg font-medium">${cert.issuer}</p>
+              <p class="text-sm text-gray-500">${cert.date}</p>
+              <a href="${cert.link}" target="_blank" 
+                class="mt-4 px-5 py-2 border border-orange-500 text-orange-400 rounded-full hover:bg-orange-500 hover:text-gray-900 transition duration-300">
+                View Certificate <i class="fas fa-external-link-alt ml-1"></i>
+              </a>
+            </div>
+          `;
+        certGrid.appendChild(card);
       });
+
+      updatePagination();
     }
 
-    function renderPagination() {
-      const totalPages = Math.ceil(certData.length / perPage);
-      const pagination = document.getElementById('certPagination');
-      pagination.innerHTML = '';
-
-      if (currentPage > 1) {
-        pagination.innerHTML += `
-        <button onclick="gotoPage(${currentPage - 1})"
-          class="px-3 py-1 rounded bg-red-600 text-white hover:bg-red-700 transition">
-          Prev
-        </button>`;
-      }
+    // === Pagination Logic ===
+    function updatePagination() {
+      const totalPages = Math.ceil(certifications.length / itemsPerPage);
+      const pagination = document.getElementById("certPagination");
+      pagination.innerHTML = "";
 
       for (let i = 1; i <= totalPages; i++) {
-        pagination.innerHTML += `
-        <button onclick="gotoPage(${i})"
-          class="px-3 py-1 rounded ${i === currentPage
-            ? 'bg-red-700 text-white'
-            : 'bg-red-600 text-white hover:bg-red-700'} transition">
-          ${i}
-        </button>`;
-      }
-
-      if (currentPage < totalPages) {
-        pagination.innerHTML += `
-        <button onclick="gotoPage(${currentPage + 1})"
-          class="px-3 py-1 rounded bg-red-600 text-white hover:bg-red-700 transition">
-          Next
-        </button>`;
+        const button = document.createElement("button");
+        button.className = `
+            w-10 h-10 flex items-center justify-center rounded-full 
+            ${i === currentPage ? "bg-orange-500 text-gray-900 font-bold" : "bg-gray-800 text-white hover:bg-orange-400 hover:text-gray-900"} 
+            transition duration-300 shadow-md
+          `;
+        button.textContent = i;
+        button.addEventListener("click", () => {
+          currentPage = i;
+          displayCertifications(currentPage);
+        });
+        pagination.appendChild(button);
       }
     }
 
-    function gotoPage(page) {
-      currentPage = page;
-      renderCertifications();
-      renderPagination();
-    }
-
-    // Initial render
-    renderCertifications();
-    renderPagination();
+    // === Initial Display ===
+    displayCertifications(currentPage);
   </script>
+
+  <hr class="mt-4 mb-16 border-t-1 border-gray-700 w-11/12 mx-auto">
+
+  <!--===== START: TESTIMONIALS SECTION =====-->
+  <section id="testimonials"
+    class="py-20 px-4 md:px-8 bg-gradient-to-b from-gray-900 via-gray-950 to-black relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+
+      <h2 class="text-5xl font-bold text-center mb-16 text-white" data-aos="fade-down">
+        Professional Endorsements
+      </h2>
+
+      <!-- Testimonials Grid -->
+      <div id="testimonialGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" data-aos="fade-up">
+        <!-- JS will inject testimonial cards here -->
+      </div>
+
+      <!-- Show More Button -->
+      <div class="text-center mt-12">
+        <button id="loadMoreBtn"
+          class="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-gray-900 font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-orange-500/40">
+          View More
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!--===== Testimonials Data =====-->
+  <script>
+    const testimonials = [
+      {
+        name: "Prof. P. D. Jadhav",
+        role: "HOD of Masters of Computer Application",
+        org: "MET Institute of Engineering",
+        img: "Testimonials/P_Jadhav_Sir.jpg",
+        text: "I’ve seen Harshad grow into a skilled and confident developer who isn’t afraid to explore new technologies.His work ethic and integrity are impressive."
+      },
+      {
+        name: "Prof. M. Khond",
+        role: "Professor of Masters of Computer Application",
+        org: "MET Institute of Engineering",
+        img: "Testimonials/M_Khond_Maam.jpg",
+        text: "Harshad shows a rare balance of technical mastery and a willingness to help peers. His passion for problem-solving sets him apart."
+      },
+      {
+        name: "Prof. J. Attar",
+        role: "Professor of Masters of Computer Application",
+        org: "MET Institute of Engineering",
+        img: "Testimonials/J_Attar_Sir.jpg",
+        text: "Harshad’s enthusiasm for technology, especially in full-stack development and data analysis, is inspiring. He brings creativity and precision to every task he undertakes."
+      },
+      {
+        name: "Ass. Prof. M. Khan",
+        role: "Professor of Masters of Computer Application",
+        org: "MET Institute of Engineering",
+        img: "Testimonials/M_Khan_Sir.jpg",
+        text: "It’s rare to encounter a student like Harshad, who combines technical proficiency with excellent communication and leadership skills. He is always eager to learn."
+      },
+      {
+        name: "Prof. P. Malani",
+        role: "HOD of Masters of Science in Computer Science",
+        org: "K.K. Wagh Agriculture College",
+        img: "Testimonials/P_Malani_Sir.jpg",
+        text: "Harshad has consistently demonstrated exceptional dedication, analytical thinking, and technical expertise. His ability to quickly grasp complex concepts is truly commendable."
+      },
+      {
+        name: "Ass. Prof. Y. Sonawane",
+        role: "Professor of Bachelor's of Science in Computer Application",
+        org: "Gokhale Education Society",
+        img: "Testimonials/Y_Sonawane_Maam.jpg",
+        text: "Harshad is a focused and motivated learner who has impressed us with his innovative solutions and collaborative spirit. His contributions to class projects have always stood out."
+      }
+    ];
+
+    let visibleCount = 3;
+
+    function displayTestimonials() {
+      const grid = document.getElementById("testimonialGrid");
+      grid.innerHTML = "";
+
+      testimonials.slice(0, visibleCount).forEach(t => {
+        const card = document.createElement("div");
+        card.className = `
+            bg-gray-800 border-t-4 border-orange-500 rounded-xl p-6 text-center 
+            shadow-2xl transition duration-500 hover:shadow-orange-500/30 hover:-translate-y-2
+          `;
+        card.innerHTML = `
+            <img src="${t.img}" alt="${t.name}"
+              class="w-24 h-24 mx-auto rounded-full mb-5 object-cover border-4 border-orange-500">
+            <p class="text-md text-gray-300 italic mb-4">"${t.text}"</p>
+            <h3 class="text-xl font-semibold text-white">${t.name}</h3>
+            <p class="text-sm text-orange-400">${t.role}</p>
+            <p class="text-xs text-gray-400">${t.org}</p>
+          `;
+        grid.appendChild(card);
+      });
+
+      const loadBtn = document.getElementById("loadMoreBtn");
+      if (visibleCount >= testimonials.length) {
+        loadBtn.style.display = "none";
+      }
+    }
+
+    document.getElementById("loadMoreBtn").addEventListener("click", () => {
+      visibleCount += 3;
+      displayTestimonials();
+    });
+
+    // Initial Load
+    displayTestimonials();
+  </script>
+
+  <hr class="mt-4 mb-16 border-t-1 border-gray-700 w-11/12 mx-auto">
+
+  <!--===== START: CONTACT SECTION =====-->
+  <section id="contact" class="py-20 px-4 md:px-8 bg-gradient-to-b from-gray-900 via-gray-950 to-black">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-5xl font-bold mb-4 text-white" data-aos="fade-down">Connect With Me</h2><br>
+      <div class="space-y-6 bg-gray-800 border-t-4 border-orange-500 rounded-xl p-8 shadow-2xl" data-aos="zoom-in">
+        <p class="text-lg text-gray-300 mb-6">
+          I’m actively seeking opportunities in <span class="text-orange-400 font-semibold">Data Analysis</span>
+          and always open to discussing new projects or collaborations.
+        </p>
+
+        <!-- Contact Links -->
+        <div
+          class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-10 text-lg font-medium mb-6">
+          <a href="mailto:harshaddhongade0901@gmail.com"
+            class="text-orange-400 hover:text-orange-300 transition duration-300">
+            <i class="fas fa-envelope mr-2"></i>harshaddhongade0901@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/harshad-dhongade" target="_blank"
+            class="text-orange-400 hover:text-orange-300 transition duration-300">
+            <i class="fab fa-linkedin mr-2"></i>LinkedIn Profile
+          </a>
+        </div>
+
+        <hr class="border-gray-700">
+
+        <!-- Contact Form -->
+        <form id="contactForm" class="space-y-6 max-w-xl mx-auto">
+          <div class="relative">
+            <input type="text" name="name" id="name" placeholder="Your Name" required class="peer w-full px-5 py-3 rounded-lg border border-gray-700 bg-gray-900 text-white 
+              focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition duration-300">
+            <label for="name"
+              class="absolute left-5 top-3 text-gray-500 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-500 
+                       peer-placeholder-shown:text-base peer-focus:top-[-10px] peer-focus:text-sm peer-focus:text-orange-400">
+            </label>
+          </div>
+
+          <div class="relative">
+            <input type="email" name="email" id="email" placeholder="Your Email" required class="peer w-full px-5 py-3 rounded-lg border border-gray-700 bg-gray-900 text-white 
+              focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition duration-300">
+            <label for="email"
+              class="absolute left-5 top-3 text-gray-500 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-500 
+                       peer-placeholder-shown:text-base peer-focus:top-[-10px] peer-focus:text-sm peer-focus:text-orange-400">
+            </label>
+          </div>
+
+          <div class="relative">
+            <textarea rows="5" name="message" id="message" placeholder="Message" required
+              class="peer w-full px-5 py-3 rounded-lg border border-gray-700 bg-gray-900 text-white
+              focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition duration-300"></textarea>
+            <label for="message"
+              class="absolute left-5 top-3 text-gray-500 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-500 
+                       peer-placeholder-shown:text-base peer-focus:top-[-10px] peer-focus:text-sm peer-focus:text-orange-400">
+            </label>
+          </div>
+
+          <button type="submit"
+            class="w-full px-8 py-3 bg-gray-900 border border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-500 hover:text-gray-900 transition duration-300 transform hover:scale-[1.02] shadow-xl flex justify-center items-center">
+            <span id="btnText">Send Message</span>
+            <i class="fas fa-paper-plane ml-2"></i>
+          </button>
+
+        </form>
+
+        <!-- Toast Notification -->
+        <div id="toast"
+          class="hidden fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg">
+          Message sent successfully!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EmailJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("harshaddhongade0901@gmail.com");
+    })();
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const btnText = document.getElementById("btnText");
+      btnText.textContent = "Sending...";
+
+      emailjs.sendForm("service_id", "template_id", this)
+        .then(() => {
+          btnText.textContent = "Send Message";
+          this.reset();
+
+          const toast = document.getElementById("toast");
+          toast.classList.remove("hidden");
+          setTimeout(() => toast.classList.add("hidden"), 3000);
+        }, (error) => {
+          btnText.textContent = "Send Message";
+          alert("Failed to send message. Please try again later.");
+          console.error(error);
+        });
+    });
+  </script>
+
+  <!--===== START: FOOTER SECTION =====-->
+  <footer
+    class="py-14 px-8 bg-gradient-to-b from-gray-950 via-gray-900 to-black border-t border-gray-700 relative z-10">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center md:text-left">
+
+      <!-- Brand + Social -->
+      <div class="space-y-5" data-aos="fade-up">
+        <h3 class="text-3xl font-bold text-orange-400 mb-4">HD | Data</h3>
+
+        <div class="flex justify-center md:justify-start space-x-6 text-orange-500">
+          <a href="https://www.instagram.com/prisoner_of_mind_91/" target="_blank" aria-label="Instagram"
+            class="hover:text-white transition duration-300 transform hover:scale-110">
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+          <a href="https://github.com/harshad912004" target="_blank" aria-label="GitHub"
+            class="hover:text-white transition duration-300 transform hover:scale-110">
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a href="https://x.com/Harshad0901?t=oDWSWFh2v2YDZ4-cbd0JoA&s=09" target="_blank" aria-label="Twitter"
+            class="hover:text-white transition duration-300 transform hover:scale-110">
+            <i class="fab fa-twitter text-2xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/harshad-dhongade" target="_blank" aria-label="LinkedIn"
+            class="hover:text-white transition duration-300 transform hover:scale-110">
+            <i class="fab fa-linkedin-in text-2xl"></i>
+          </a>
+        </div>
+
+        <p class="text-sm text-gray-500 mt-4">© 2025 <span class="text-orange-400 font-medium">Harshad Dhongade</span>.
+          All rights reserved.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold text-orange-400 mb-5">Quick Links</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#skills" class="hover:text-orange-400 transition duration-300">Skills & Tech Stack</a></li>
+          <li><a href="#projects" class="hover:text-orange-400 transition duration-300">Featured Projects</a></li>
+          <li><a href="#about" class="hover:text-orange-400 transition duration-300">About Me</a></li>
+          <li><a href="#education" class="hover:text-orange-400 transition duration-300">Education</a></li>
+        </ul>
+      </div>
+
+      <!-- Soft Skills -->
+      <div data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-xl font-semibold text-orange-400 mb-5">Key Soft Skills</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li>Analytical Thinking</li>
+          <li>Data Storytelling</li>
+          <li>Problem Solving</li>
+          <li>Team Collaboration</li>
+        </ul>
+      </div>
+
+      <!-- Interests -->
+      <div data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-xl font-semibold text-orange-400 mb-5">Personal Interests</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li>Playing Chess</li>
+          <li>Workout / Fitness</li>
+          <li>Tree Plantation</li>
+          <li>Languages: Hindi, Marathi, English</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+      class="hidden fixed bottom-6 right-6 bg-gray-900 border-2 border-orange-400 text-orange-400 p-3 rounded-full shadow-lg 
+             hover:bg-orange-500 hover:text-gray-900 transition duration-300 transform hover:scale-110 focus:outline-none z-50">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+  </footer>
+
+  <!--===== Back to Top Script =====-->
+  <script>
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) backToTop.classList.remove("hidden");
+      else backToTop.classList.add("hidden");
+    });
+    backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out',
+      once: true,
+    });
+  </script>
+
+  <!-- Navbar Scroll Effect -->
+  <script>
+    const navbar = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('nav-scrolled');
+      } else {
+        navbar.classList.remove('nav-scrolled');
+      }
+    });
+  </script>
+
 </body>
 
 </html>
