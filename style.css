@@ -1,7 +1,64 @@
-.white-mode {
-  background-color: white;
-  color: black;
+body,
+.bg-gray-800,
+.text-gray-300,
+.text-gray-400,
+.text-gray-500 {
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
 }
+
+/* ==================================
+   1. Light Mode Definition
+   ================================== */
+/* * This class is applied to the <body> element by the Toggle button 
+ * in the original portfolio (which you can re-implement if desired).
+ * Since the toggle button was removed for simplicity, 
+ * this provides the foundational theme colors if you add the toggle back.
+ */
+.light-mode {
+  /* Background: White */
+  background-color: white !important;
+  /* Text: Dark Gray/Black */
+  color: #333333 !important;
+}
+
+/* Custom styles for elements inside light mode (overriding the dark mode classes in HTML) */
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode .text-white {
+  color: #111827 !important;
+  /* Dark text color */
+}
+
+/* Overriding the dark background cards/containers in light mode */
+.light-mode .bg-gray-800 {
+  background-color: #f3f4f6 !important;
+  /* Light gray card background */
+  border-color: #d1d5db !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Overriding the dark text colors inside cards in light mode */
+.light-mode .text-gray-300,
+.light-mode .text-gray-400,
+.light-mode .text-gray-500 {
+  color: #4b5563 !important;
+  /* Medium dark text */
+}
+
+/* Orange Accent Color (Amber-500 equivalent) */
+.light-mode .text-orange-400,
+.light-mode .hover\:text-orange-400:hover,
+.light-mode .border-orange-500,
+.light-mode .bg-orange-500 {
+  color: #f59e0b !important;
+  border-color: #f59e0b !important;
+  background-color: #f59e0b !important;
+}
+
+/* ==================================
+   2. Custom Animations (Retained)
+   ================================== */
 
 /* Fade Animation Styles */
 @keyframes fadeInDown {
@@ -50,6 +107,10 @@
   animation: fadeIn 2s ease-out forwards;
 }
 
+/* ==================================
+   3. Utility Classes (Retained)
+   ================================== */
+
 /* Custom class to hide scrollbar across browsers */
 .scrollbar-hide {
   scrollbar-width: none;
@@ -61,4 +122,29 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
   /* Chrome, Safari, Opera */
+}
+
+/* Default navbar (transparent with blur) is already defined in HTML */
+
+/* Navbar background after scrolling */
+.nav-scrolled {
+  background-color: #f3f4f6 !important;
+  /* light gray */
+  backdrop-filter: none !important;
+  /* remove blur */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Optional: Dark text for light background */
+.nav-scrolled h1,
+.nav-scrolled .nav-link,
+.nav-scrolled a {
+  color: #111827 !important;
+}
+
+/* Orange accent stays consistent */
+.nav-scrolled .text-orange-400 {
+  color: #f97316 !important;
+  /* Tailwind orange-500 */
 }
