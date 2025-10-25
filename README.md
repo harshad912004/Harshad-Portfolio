@@ -14,20 +14,19 @@ Designed for recruiters, collaborators, and fellow tech enthusiasts.
 ## 📌 Features
 
 - **Responsive design** (works great on mobile, tablet, desktop)
-- **Dark / Light mode toggle**
 - **Floating + scroll animations**
 - **Back-to-top button**
 - **Smooth scroll navigation**
 - **Sections:**
-  - Home / Hero + intro
-  - Skills (Data Analysis, Java full stack, common tools)
+  - Home (Hero + intro)
+  - Skills (Data Analysis, common tools)
   - Projects grid (with live links)
   - About + Personal vision
   - Education timeline
   - Certifications grid (with previews)
   - Testimonials
-  - Contact form + social links
-  - Footer with extra information
+  - Contact form
+  - Footer (Extra information + social links)
 
 ---
 
@@ -68,8 +67,8 @@ Save and wait for your site to go live!
 
 📬 Contact  
 If you'd like to connect, feel free to:  
-💌 Gmail1 - harshaddhongade0901@example.com  
-💌 Gmail2 - harshaddhongade9124@example.com  
+💌 Gmail1 - harshaddhongade9124@example.com  
+💌 Gmail2 - harshaddhongade0901@example.com  
 🔗 LinkedIn - https://www.linkedin.com/in/harshad-dhongade  
 🔗 GitHub - https://github.com/harshad912004  
 
