@@ -580,146 +580,140 @@
   <hr class="mt-4 mb-16 border-t-1 border-gray-700 w-11/12 mx-auto">
 
   <!--===== START: CERTIFICATIONS SECTION =====-->
-  <section id="certifications"
-    class="py-20 px-4 md:px-8 bg-gradient-to-b from-gray-900 via-gray-950 to-black relative overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-
-      <!-- Section Heading -->
-      <h2 class="text-5xl font-bold text-center mb-16 text-white" data-aos="fade-down">
-        Certifications & Specialized Training
-      </h2>
-
-      <!-- Certifications Grid -->
-      <div id="certGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10" data-aos="zoom-in-up">
-        <!-- Cards will be injected dynamically via JS -->
+  <section id="certifications" class="py-20 px-4 md:px-8 bg-gradient-to-b from-gray-900 via-gray-950 to-black relative overflow-hidden">
+      <div class="max-w-7xl mx-auto">
+        <!-- Section Heading -->
+        <h2 class="text-5xl font-bold text-center mb-16 text-white" data-aos="fade-down">
+          Certifications & Specialized Training </h2>
+        
+        <!-- Certifications Grid -->
+        <div id="certGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10" data-aos="zoom-in-up">
+          <!-- Cards will be injected dynamically via JS -->
+        </div>
+        
+        <!-- Pagination Buttons -->
+        <div id="certPagination" class="flex justify-center mt-12 space-x-3 relative z-10"></div>
       </div>
-
-      <!-- Pagination Buttons -->
-      <div id="certPagination" class="flex justify-center mt-12 space-x-3 relative z-10"></div>
-
-    </div>
   </section>
-
   <!--===== Certification Data =====-->
   <script>
+  document.addEventListener("DOMContentLoaded", () => {
     const certifications = [
       {
         title: "Research Paper Published Certificate",
-        issuer: "International Research Journal of Innovations in Engineering and Technology (IRJIET)",
+        issuer: "International Research Journal of Innovations in Engineering and Technology (IRJIET)",
         date: "2025",
         link: "https://irjiet.com/Volume-9/Issue-11-November-2025/CampusEatS-Online-Canteen-Food-Ordering-for-Met-Campus/2973",
-        icon: "fas fa-paper"
+        icon: "fa-solid fa-newspaper"
       },
       {
         title: "Java Training",
         issuer: "IIT Spoken Tutorial",
         date: "2025",
         link: "https://drive.google.com/file/d/1YptdqvnwUBtMI0CzShONhRIXXv7KcBkC/view?usp=drive_link",
-        icon: "fas fa-java"
-      }
+        icon: "fa-brands fa-java"
+      },
       {
         title: "MET's SPARX Event Code Trace",
         issuer: "MET BKC IOE",
         date: "2025",
         link: "https://drive.google.com/file/d/1GQFe_0jhQNemVTrmPUQZxQsPjIP6Jd7O/view?usp=sharing",
-        icon: "fas fa-chart-line"
+        icon: "fa-solid fa-code"
       },
       {
         title: "Python For Data Science",
         issuer: "NPTEL",
         date: "2025",
         link: "https://drive.google.com/file/d/1i4ZMUkUFWb3dhvzcrVA1-GOg19eQ2NEF/view?usp=sharing",
-        icon: "fas fa-chart-line"
+        icon: "fa-brands fa-python"
       },
       {
         title: "Innovating with Google Cloud AI",
         issuer: "SimpliLearn & Google Cloud",
         date: "2025",
         link: "https://simpli.app.link/GGdvvJUesUb",
-        icon: "fas fa-cloud"
+        icon: "fa-solid fa-cloud"
       },
       {
         title: "Data Analyst 101",
         issuer: "SimpliLearn & Microsoft",
         date: "2025",
         link: "https://simpli.app.link/nZk6CS8HoUb",
-        icon: "fab fa-data"
+        icon: "fa-solid fa-database"
       },
       {
         title: "Power BI for Beginners",
         issuer: "SimpliLearn & Microsoft",
         date: "2025",
         link: "https://simpli.app.link/jjUYGw82nUb",
-        icon: "fas fa-file-chart"
+        icon: "fa-solid fa-chart-column"
       },
       {
         title: "Business Analytics With Excel",
         issuer: "SimpliLearn & Microsoft",
         date: "2025",
         link: "https://simpli.app.link/aacbEMO9mUb",
-        icon: "fas fa-excel"
+        icon: "fa-solid fa-file-excel"
       },
       {
         title: "Python 3.4.3 Training",
         issuer: "IIT Spoken Tutorial",
         date: "2025",
         link: "https://drive.google.com/file/d/1Mu4dJVwGwvrcyUXxBV2GcDgUfQ6EKn-r/view?usp=drive_link",
-        icon: "fas fa-python"
+        icon: "fa-brands fa-python"
       }
     ];
-
-    // === Display Settings ===
+  
     const itemsPerPage = 3;
     let currentPage = 1;
-
+  
     function displayCertifications(page) {
       const certGrid = document.getElementById("certGrid");
       certGrid.innerHTML = "";
-
+  
       const start = (page - 1) * itemsPerPage;
       const end = start + itemsPerPage;
       const certsToShow = certifications.slice(start, end);
-
+  
       certsToShow.forEach(cert => {
         const card = document.createElement("div");
         card.className = `
-            bg-gray-800/80 backdrop-blur-sm border border-gray-700 hover:border-orange-500
-            rounded-2xl p-8 shadow-lg hover:shadow-orange-500/30 transform hover:-translate-y-2
-            transition-all duration-500
-          `;
+          bg-gray-800/80 backdrop-blur-sm border border-gray-700 hover:border-orange-500
+          rounded-2xl p-8 shadow-lg hover:shadow-orange-500/30 transform hover:-translate-y-2
+          transition-all duration-500
+        `;
         card.innerHTML = `
-            <div class="flex flex-col items-center text-center space-y-4">
-              <div class="text-orange-400 text-5xl mb-2">
-                <i class="${cert.icon}"></i>
-              </div>
-              <h3 class="text-2xl font-semibold text-white">${cert.title}</h3>
-              <p class="text-gray-400 text-lg font-medium">${cert.issuer}</p>
-              <p class="text-sm text-gray-500">${cert.date}</p>
-              <a href="${cert.link}" target="_blank" 
-                class="mt-4 px-5 py-2 border border-orange-500 text-orange-400 rounded-full hover:bg-orange-500 hover:text-gray-900 transition duration-300">
-                View Certificate <i class="fas fa-external-link-alt ml-1"></i>
-              </a>
+          <div class="flex flex-col items-center text-center space-y-4">
+            <div class="text-orange-400 text-5xl mb-2">
+              <i class="${cert.icon}"></i>
             </div>
-          `;
+            <h3 class="text-2xl font-semibold text-white">${cert.title}</h3>
+            <p class="text-gray-400 text-lg font-medium">${cert.issuer}</p>
+            <p class="text-sm text-gray-500">${cert.date}</p>
+            <a href="${cert.link}" target="_blank" rel="noopener noreferrer"
+              class="mt-4 px-5 py-2 border border-orange-500 text-orange-400 rounded-full hover:bg-orange-500 hover:text-gray-900 transition duration-300">
+              View Certificate <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        `;
         certGrid.appendChild(card);
       });
-
+  
       updatePagination();
     }
-
-    // === Pagination Logic ===
+  
     function updatePagination() {
       const totalPages = Math.ceil(certifications.length / itemsPerPage);
       const pagination = document.getElementById("certPagination");
       pagination.innerHTML = "";
-
+  
       for (let i = 1; i <= totalPages; i++) {
         const button = document.createElement("button");
         button.className = `
-            w-10 h-10 flex items-center justify-center rounded-full 
-            ${i === currentPage ? "bg-orange-500 text-gray-900 font-bold" : "bg-gray-800 text-white hover:bg-orange-400 hover:text-gray-900"} 
-            transition duration-300 shadow-md
-          `;
+          w-10 h-10 flex items-center justify-center rounded-full 
+          ${i === currentPage ? "bg-orange-500 text-gray-900 font-bold" : "bg-gray-800 text-white hover:bg-orange-400 hover:text-gray-900"} 
+          transition duration-300 shadow-md
+        `;
         button.textContent = i;
         button.addEventListener("click", () => {
           currentPage = i;
@@ -728,47 +722,48 @@
         pagination.appendChild(button);
       }
     }
-
-    // === Initial Display ===
+  
+    // Initial Display
     displayCertifications(currentPage);
+  });
   </script>
-
   <hr class="mt-4 mb-16 border-t-1 border-gray-700 w-11/12 mx-auto">
 
   <!--===== START: TESTIMONIALS SECTION =====-->
   <section id="testimonials"
     class="py-20 px-4 md:px-8 bg-gradient-to-b from-gray-900 via-gray-950 to-black relative overflow-hidden">
     <div class="max-w-7xl mx-auto">
-
+  
       <h2 class="text-5xl font-bold text-center mb-16 text-white" data-aos="fade-down">
         Professional Endorsements
       </h2>
-
+  
       <!-- Testimonials Grid -->
       <div id="testimonialGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" data-aos="fade-up">
         <!-- JS will inject testimonial cards here -->
       </div>
-
+  
       <!-- Show More Button -->
       <div class="text-center mt-12">
+        <!-- fixed missing closing quote on class -->
         <button id="loadMoreBtn"
-          class="px-8 py-3 bg-orange-600 text-white font-medium rounded-full hover:bg-orange-500 hover:shadow-lg hover:shadow-orange-500/40 transition-all duration-300>
+          class="px-8 py-3 bg-orange-600 text-white font-medium rounded-full hover:bg-orange-500 hover:shadow-lg hover:shadow-orange-500/40 transition-all duration-300">
           View More ↓
         </button>
       </div>
-    
     </div>
   </section>
 
-  <!--===== Testimonials Data =====-->
+  <!--===== Testimonials Data & Script (fixed) =====-->
   <script>
+  document.addEventListener("DOMContentLoaded", () => {
     const testimonials = [
       {
         name: "Prof. P. D. Jadhav",
         role: "HOD of Masters of Computer Application",
         org: "MET Institute of Engineering",
         img: "Testimonials/P_Jadhav_Sir.jpg",
-        text: "I’ve seen Harshad grow into a skilled and confident developer who isn’t afraid to explore new technologies.His work ethic and integrity are impressive."
+        text: "I’ve seen Harshad grow into a skilled and confident developer who isn’t afraid to explore new technologies. His work ethic and integrity are impressive."
       },
       {
         name: "Ass. Prof. M. Khan",
@@ -792,45 +787,58 @@
         text: "Harshad is a focused and motivated learner who has impressed us with his innovative solutions and collaborative spirit. His contributions to class projects have always stood out."
       }
     ];
-
+  
     let visibleCount = 3;
-
+  
     function displayTestimonials() {
       const grid = document.getElementById("testimonialGrid");
+      if (!grid) return;
       grid.innerHTML = "";
-
+  
       testimonials.slice(0, visibleCount).forEach(t => {
         const card = document.createElement("div");
         card.className = `
-            bg-gray-800 border-t-4 border-orange-500 rounded-xl p-6 text-center 
-            shadow-2xl transition duration-500 hover:shadow-orange-500/30 hover:-translate-y-2
-          `;
+          bg-gray-800 border-t-4 border-orange-500 rounded-xl p-6 text-center 
+          shadow-2xl transition duration-500 hover:shadow-orange-500/30 hover:-translate-y-2
+        `;
+        // `onerror` sets a simple fallback image if the file path is wrong
         card.innerHTML = `
-            <img src="${t.img}" alt="${t.name}"
-              class="w-24 h-24 mx-auto rounded-full mb-5 object-cover border-4 border-orange-500">
-            <p class="text-md text-gray-300 italic mb-4">"${t.text}"</p>
-            <h3 class="text-xl font-semibold text-white">${t.name}</h3>
-            <p class="text-sm text-orange-400">${t.role}</p>
-            <p class="text-xs text-gray-400">${t.org}</p>
-          `;
+          <img src="${t.img}" alt="${t.name}"
+            onerror="this.onerror=null; this.src='Testimonials/placeholder.jpg';"
+            class="w-24 h-24 mx-auto rounded-full mb-5 object-cover border-4 border-orange-500">
+          <p class="text-md text-gray-300 italic mb-4">"${t.text}"</p>
+          <h3 class="text-xl font-semibold text-white">${t.name}</h3>
+          <p class="text-sm text-orange-400">${t.role}</p>
+          <p class="text-xs text-gray-400">${t.org}</p>
+        `;
         grid.appendChild(card);
       });
-
+  
       const loadBtn = document.getElementById("loadMoreBtn");
-      if (visibleCount >= testimonials.length) {
-        loadBtn.style.display = "none";
+      if (loadBtn) {
+        if (visibleCount >= testimonials.length) {
+          loadBtn.style.display = "none";
+        } else {
+          loadBtn.style.display = "inline-block";
+        }
       }
     }
-
-    document.getElementById("loadMoreBtn").addEventListener("click", () => {
-      visibleCount += 3;
-      displayTestimonials();
-    });
-
-    // Initial Load
+  
+    const loadBtn = document.getElementById("loadMoreBtn");
+    if (loadBtn) {
+      loadBtn.addEventListener("click", () => {
+        visibleCount += 3;
+        displayTestimonials();
+      });
+    } else {
+      // defensive: log so you can check console if the element wasn't found
+      console.warn("loadMoreBtn not found in DOM.");
+    }
+  
+    // initial render
     displayTestimonials();
+  });
   </script>
-
   <hr class="mt-4 mb-16 border-t-1 border-gray-700 w-11/12 mx-auto">
 
   <!--===== START: CONTACT SECTION =====-->
@@ -887,13 +895,14 @@
                        peer-placeholder-shown:text-base peer-focus:top-[-10px] peer-focus:text-sm peer-focus:text-orange-400">
             </label>
           </div>
-
-          <button type="submit"
-            class="w-full px-8 py-3 bg-gray-900 border border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-500 hover:text-gray-900 transition duration-300 transform hover:scale-[1.02] shadow-xl flex justify-center items-center">
-            <span id="btnText">Send Message</span>
-            <i class="fas fa-paper-plane ml-2"></i>
-          </button>
-
+          
+          <div class="flex justify-center">
+            <button type="submit"
+              class="px-8 py-3 bg-gray-900 border border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-500 hover:text-gray-900 transition duration-300 transform hover:scale-[1.02] shadow-xl flex items-center">
+              <span id="btnText">Send Message</span>
+              <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+          </div>
         </form>
 
         <!-- Toast Notification -->
