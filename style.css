@@ -1,66 +1,152 @@
-body,
-.bg-gray-800,
-.text-gray-300,
-.text-gray-400,
+* {
+  transition: background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Remove scrollbar for modern clean UI */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================
+   DARK MODE (default)
+========================================= */
+body {
+  background: #000;
+  color: #e5e7eb;
+}
+
+/* Fix text inside sections */
+.text-gray-300 {
+  color: #d1d5db !important;
+}
+
+.text-gray-400 {
+  color: #9ca3af !important;
+}
+
 .text-gray-500 {
-  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+  color: #6b7280 !important;
 }
 
-/* ==================================
-   1. Light Mode Definition
-   ================================== */
-/* * This class is applied to the <body> element by the Toggle button 
- * in the original portfolio (which you can re-implement if desired).
- * Since the toggle button was removed for simplicity, 
- * this provides the foundational theme colors if you add the toggle back.
- */
+/* Cards */
+.bg-gray-800 {
+  background-color: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+/* =========================================
+   LIGHT MODE (toggle using .light-mode on <body>)
+========================================= */
+
 .light-mode {
-  /* Background: White */
-  background-color: white !important;
-  /* Text: Dark Gray/Black */
-  color: #333333 !important;
+  background: #ffffff !important;
+  color: #1f2937 !important;
 }
 
-/* Custom styles for elements inside light mode (overriding the dark mode classes in HTML) */
+/* Headers */
 .light-mode h1,
 .light-mode h2,
 .light-mode h3,
 .light-mode .text-white {
   color: #111827 !important;
-  /* Dark text color */
 }
 
-/* Overriding the dark background cards/containers in light mode */
+/* Light background components */
 .light-mode .bg-gray-800 {
   background-color: #f3f4f6 !important;
-  /* Light gray card background */
   border-color: #d1d5db !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06) !important;
 }
 
-/* Overriding the dark text colors inside cards in light mode */
+/* Light mode text adjustments */
 .light-mode .text-gray-300,
 .light-mode .text-gray-400,
 .light-mode .text-gray-500 {
   color: #4b5563 !important;
-  /* Medium dark text */
 }
 
-/* Orange Accent Color (Amber-500 equivalent) */
-.light-mode .text-orange-400,
-.light-mode .hover\:text-orange-400:hover,
-.light-mode .border-orange-500,
+/* Orange Theme Fixing */
+.light-mode .text-orange-400 {
+  color: #f97316 !important;
+}
+
+.light-mode .hover\:text-orange-400:hover {
+  color: #f97316 !important;
+}
+
+.light-mode .border-orange-500 {
+  border-color: #f97316 !important;
+}
+
 .light-mode .bg-orange-500 {
-  color: #f59e0b !important;
-  border-color: #f59e0b !important;
-  background-color: #f59e0b !important;
+  background-color: #f97316 !important;
 }
 
-/* ==================================
-   2. Custom Animations (Retained)
-   ================================== */
+/* Buttons in light mode */
+.light-mode button,
+.light-mode .btn,
+.light-mode a.btn {
+  background-color: #f97316 !important;
+  color: white !important;
+  border-color: #f97316 !important;
+}
 
-/* Fade Animation Styles */
+/* Inputs Light Mode */
+.light-mode input,
+.light-mode textarea {
+  background-color: #f9fafb !important;
+  border-color: #d1d5db !important;
+  color: #1f2937 !important;
+}
+
+/* =========================================
+   NAVBAR SCROLL EFFECT
+========================================= */
+
+/* Dark mode scroll navbar */
+.nav-scrolled {
+  background-color: rgba(17, 17, 17, 0.9) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.nav-scrolled h1,
+.nav-scrolled a,
+.nav-scrolled .nav-link {
+  color: white !important;
+}
+
+.nav-scrolled .text-orange-400 {
+  color: #f97316 !important;
+}
+
+/* Light mode scroll navbar */
+.light-mode .nav-scrolled {
+  background-color: #f3f4f6 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.light-mode .nav-scrolled h1,
+.light-mode .nav-scrolled .nav-link,
+.light-mode .nav-scrolled a {
+  color: #111827 !important;
+}
+
+.light-mode .nav-scrolled .text-orange-400 {
+  color: #f97316 !important;
+}
+
+/* =========================================
+   CUSTOM ANIMATIONS
+========================================= */
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -107,44 +193,55 @@ body,
   animation: fadeIn 2s ease-out forwards;
 }
 
-/* ==================================
-   3. Utility Classes (Retained)
-   ================================== */
+/* =========================================
+   SHADOW FIXES FOR LIGHT MODE
+========================================= */
 
-/* Custom class to hide scrollbar across browsers */
-.scrollbar-hide {
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* IE and Edge */
+.light-mode .shadow-orange-500\/30 {
+  box-shadow: 0 4px 10px rgba(249, 115, 22, 0.25) !important;
 }
 
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-  /* Chrome, Safari, Opera */
+/* =========================================
+   FOOTER FIXES
+========================================= */
+
+footer {
+  color: #e5e7eb;
 }
 
-/* Default navbar (transparent with blur) is already defined in HTML */
-
-/* Navbar background after scrolling */
-.nav-scrolled {
-  background-color: #f3f4f6 !important;
-  /* light gray */
-  backdrop-filter: none !important;
-  /* remove blur */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease-in-out;
+.light-mode footer {
+  background: #f3f4f6 !important;
+  color: #1f2937;
+  border-color: #d1d5db !important;
 }
 
-/* Optional: Dark text for light background */
-.nav-scrolled h1,
-.nav-scrolled .nav-link,
-.nav-scrolled a {
-  color: #111827 !important;
-}
-
-/* Orange accent stays consistent */
-.nav-scrolled .text-orange-400 {
+.light-mode footer a {
   color: #f97316 !important;
-  /* Tailwind orange-500 */
+}
+
+/* =========================================
+   BACK TO TOP BUTTON
+========================================= */
+#backToTop {
+  transition: 0.3s ease;
+}
+
+#backToTop:hover {
+  transform: scale(1.1);
+}
+
+/* =========================================
+   PROJECT / CARD / TESTIMONIAL FIXES
+========================================= */
+
+.light-mode .border-gray-700 {
+  border-color: #d1d5db !important;
+}
+
+.light-mode .shadow-2xl {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+.light-mode .hover\:shadow-orange-500\/30:hover {
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.25) !important;
 }
