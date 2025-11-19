@@ -1,40 +1,49 @@
-# 🚀 Harshad Dhongade | Personal Portfolio
+# 🚀 Harshad Dhongade | Portfolio Website
 
-Welcome to my personal portfolio website!  
-This site showcases my **skills**, **projects**, **about**, **education**, **certifications**, **testimonials**, and **contact information** in a clean, responsive, and interactive format.  
-Designed for recruiters, collaborators, and fellow tech enthusiasts.
+Welcome to my personal portfolio website!
+This site showcases my skills, projects, education, certifications, testimonials, and contact details in a clean, fully-responsive, and interactive format.
+
+Designed for recruiters, collaborators, and tech enthusiasts who want a quick overview of my technical abilities and experience.
 
 ---
 
-## 🌟 Live Demo
+## 🌐 Live Demo
 👉 [View Portfolio](https://harshad912004.github.io/Harshad-Portfolio/)
 
 ---
 
-## 📌 Features
-
-- **Responsive design** (works great on mobile, tablet, desktop)
-- **Floating + scroll animations**
-- **Back-to-top button**
-- **Smooth scroll navigation**
-- **Sections:**
-  - Home (Hero + intro)
-  - Skills (Data Analysis, common tools)
-  - Projects grid (with live links)
-  - About + Personal vision
-  - Education timeline
-  - Certifications grid (with previews)
-  - Testimonials
-  - Contact form
-  - Footer (Extra information + social links)
+## 🌟 Features
+- ⚡ Fully responsive UI (mobile-friendly)
+- 🎨 Clean, modern TailwindCSS styling
+- ✨ Smooth scroll animations (AOS)
+- ⬆ Back-to-top button
+- 🔥 Dynamic Certifications Grid (JS pagination)
+- 🗂 Dynamic Testimonials (Load More system)
+- 📬 Working Contact Form (Web3Forms)
+- 💡 Theme-ready structure (Dark/Light Mode compatible)
 
 ---
 
-## ⚙ Technologies Used
+## 📑 Sections Included
+- Hero Section (Introduction)
+- Skills & Tech Stack
+- Featured Projects
+- About Me + Vision
+- Education Timeline
+- Research Paper Section (if added)
+- Certifications
+- Testimonials
+- Contact Form
+- Footer with social links
 
-- **HTML5 / CSS3 / TailwindCSS**
-- **JavaScript**
-- **AOS / ScrollReveal (scroll effects)**
+---
+
+## 🛠 Technologies Used
+- HTML5
+- CSS3 / TailwindCSS
+- JavaScript (vanilla)
+- AOS – Scroll Animations
+- Web3Forms – Contact Form Backend
 
 ---
 
@@ -45,45 +54,55 @@ Designed for recruiters, collaborators, and fellow tech enthusiasts.
 ┣ 📂 Testimonials  
 ┣ HD_Photo_New.jpg  
 ┣ logo.png  
-┣ Harshad_Resume_DA.pdf  
+┣ Harshad_Resume_Data_Analyst.pdf  
+┣ Harshad_Resume_Java_Development.pdf  
+┣ Harshad_Resume_Python_Development.pdf  
+┣ Harshad_Resume_Software_Development.pdf  
 ┣ index.html  
 ┣ style.js  
+┣ README.md  
 
 ---
 
 ## 📌 How to Use / Deploy
 
-1️⃣ Clone or fork this repo:  
+1️⃣ Clone the Repository:  
 git clone https://github.com/harshad912004/Harshad-Portfolio.git  
 
-2️⃣ Open index.html in your browser OR deploy via GitHub Pages:  
-Go to Settings > Pages  
-Set source = main branch / root  
-Save and wait for your site to go live!  
+2️⃣ Open the Website:  
+Simply open index.html in any browser.  
 
-3️⃣ Customize content (images, text, links) as needed.  
-
----
-
-📬 Contact  
-If you'd like to connect, feel free to:  
-💌 Gmail1 - harshaddhongade9124@example.com  
-💌 Gmail2 - harshaddhongade0901@example.com  
-🔗 LinkedIn - https://www.linkedin.com/in/harshad-dhongade  
-🔗 GitHub - https://github.com/harshad912004  
+3️⃣ Deploy with GitHub Pages:  
+- Go to Repository → Settings → Pages
+- Select: Branch: main → /(root)
+- Save: Your portfolio goes live in a few seconds!
 
 ---
 
-📄 License  
-This portfolio is open for learning purposes. You’re welcome to reference its structure, but please do not copy it 1:1 without permission.  
+## 📬 Contact Me
+If you'd like to connect, collaborate, or hire me — feel free to reach out:
+- 📧 Email 1: harshaddhongade9124@gmail.com
+- 📧 Email 2: harshaddhongade0901@gmail.com
+- 🔗 LinkedIn: https://www.linkedin.com/in/harshad-dhongade
+- 🐙 GitHub: https://github.com/harshad912004
 
 ---
 
-🙌 Acknowledgments  
- - TailwindCSS
- - AOS
- - All the amazing open-source tools used  
+## 📄 License
+This portfolio is available for educational and reference purposes.
+Directly copying the full design or layout without permission is discouraged.  
 
 ---
 
-✨ Built by **Harshad Dhongade**
+## 🙏 Acknowledgments
+Thanks to all the amazing open-source tools and libraries used, including:
+- 🚀 TailwindCSS
+- ✨ AOS Animations
+- 💡 Web3Forms
+- ❤️ And the open-source community
+
+---
+
+## ✨ Built By
+**Harshad Dhongade**  
+Java Developer | Python Developer | Data Analyst
