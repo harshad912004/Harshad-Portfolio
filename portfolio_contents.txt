@@ -1,0 +1,62 @@
+🔷 1. Hero Section (First Impression)
+Include:
+Full Name = "Harshad Dhongade"
+Title = "Associate Software Engineer & Data Analyst"
+Short tagline = "Turning data into insights and building scalable solutions."
+CTA buttons= Resume, GitHub, LinkedIn, Contact
+
+🔷 2. About Me
+Structure it like this = Background (MCA student), 
+Evolution = Started with Java development, Shifted to Data Analytics, Exploring Data Science
+Current focus = Data Analyst or Software Developer
+Strength = Ability to combine development + data thinking
+
+Example positioning = “I began my journey as a Java developer, building backend systems, later transitioned into data analytics where I developed skills in Python, Power BI, and Excel. Currently, I am expanding into data science and machine learning, aiming to build intelligent, data-driven solutions.”
+
+🔷 3. Skills Section
+💻 Programming = C, Java, Python, JavaScript
+🌐 Web Development = MERN Stack (MongoDB, Express, React, Node.js), HTML, CSS, JS
+📊 Data Analytics = Python (Pandas, NumPy), Excel, Power BI
+🤖 Data Science = Machine Learning (basic), Statistics
+🛠 Tools = Git, GitHub, VS Code, Eclipse, Jupyter Notebook
+
+🔷 4. Projects
+🔹 A. Java Projects (Backend Focus)
+🔹 B. Data Analytics Projects (Highlight These)
+👉 Include = Problem statement, Tools used, Key insights
+
+🔹 C. MERN Stack Projects = Full-stack apps from internship or personal work
+
+🔷 5. Internship Experience
+MERN Stack Developer Intern
+Include = Company name (Aquil Tech Labs), Duration (6 months), Responsibilities, Tech used (MERN + MySQL), Impact
+Example = Developed full-stack web applications using MERN, Built REST APIs and integrated frontend with backend, Improved application performance / features
+
+🔷 6. Education
+MCA (MET BKC college Nashik)
+BSc.CS (Bytco College Nashik)
+Strong academic performance (highlight % or CGPA)
+
+🔷 7. Achievements / Highlights
+Good academic scores
+Internship
+Certifications (if any)
+
+🔷 8. GitHub Section
+Highlight:
+Best repositories
+Clean code
+Contributions
+
+🔷 9. LinkedIn Section
+Add:
+Profile link
+
+🔷 10. Resume Download
+Simple but mandatory = “Download Resume” button (PDF)
+
+🔷 11. Contact Section
+Email
+LinkedIn
+GitHub
+Contact form
