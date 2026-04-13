@@ -106,6 +106,4 @@ export const Footer = () => {
       <p>&copy; {new Date().getFullYear()} Harshad Dhongade. All rights reserved.</p>
     </footer>
   );
-};git add .
-git commit -m "Fix Vercel deployment - adjust base path and add vercel.json"
-git push
+};
