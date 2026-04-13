@@ -69,7 +69,7 @@ const Hero = () => {
         >
           <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-2xl z-10 border-4 border-gray-800 group-hover:border-orange-500/50 transition-colors duration-500">
             <img
-              src="../assets/HD_Photo_New.jpg"
+              src="/HD_Photo_New.jpg"
               alt="Harshad Dhongade"
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
             />

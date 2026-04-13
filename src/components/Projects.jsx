@@ -7,7 +7,7 @@ const projectsData = [
   {
     title: "CyberGuardian",
     category: "backend",
-    image: "./Projects/Cyber_Guardian.png",
+    image: "/Cyber_Guardian.png",
     tech: ["Java (JSP/Servlet)", "JDBC", "MySQL"],
     desc: "A cyber-awareness e-learning full-stack platform featuring secure login, interactive quizzes, and a comprehensive admin panel.",
     github: "https://github.com/harshad912004/Cyber_Guardian",
@@ -16,7 +16,7 @@ const projectsData = [
   {
     title: "Subscription Retention Analysis",
     category: "analytics",
-    image: "./Projects/subscription_retention_analysis_dashboard.png",
+    image: "/subscription_retention_analysis_dashboard.png",
     tech: ["Python", "Scikit-learn", "Pandas", "SQL"],
     desc: "End-to-end Machine Learning project to predict user churn. Visualized retention metrics and derived business insights to reduce churn rate.",
     github: "https://github.com/harshad912004/Subscription_Retention_Analysis",
@@ -25,7 +25,7 @@ const projectsData = [
   {
     title: "CampusEats",
     category: "Python",
-    image: "./Projects/CampusEats.png",
+    image: "/CampusEats.png",
     tech: ["Python", "Flask", "MySQL", "HTML/CSS"],
     desc: "An online canteen ordering system built with Python Flask. Includes real-time order tracking, analytics, and role-based access control.",
     github: "#",
@@ -34,7 +34,7 @@ const projectsData = [
   {
     title: "Healthcare Dashboard",
     category: "analytics",
-    image: "./Projects/Healthcare_Dashboard.png",
+    image: "/Healthcare_Dashboard.png",
     tech: ["Python", "Power BI", "Excel"],
     desc: "Analyzed global healthcare dataset using Python. Cleaned massive datasets and built an interactive dashboard to visualize treatment access.",
     github: "https://github.com/harshad912004/Mental_Health_Analysis-Healthcare",
@@ -43,7 +43,7 @@ const projectsData = [
   {
     title: "CareConnect",
     category: "backend",
-    image: "./Projects/Care_Connect.png",
+    image: "/Care_Connect.png",
     tech: ["Java", "JDBC", "MySQL"],
     desc: "A healthcare appointment and records system handling role-based access for doctors and patients securely.",
     github: "https://github.com/harshad912004/Care-Connect",
@@ -52,7 +52,7 @@ const projectsData = [
   {
     title: "Finance & Mental Health",
     category: "analytics",
-    image: "./Projects/Finance_Dashboard.png",
+    image: "/Finance_Dashboard.png",
     tech: ["Power BI", "Pandas", "NumPy"],
     desc: "Data analytics project discovering correlations between financial stress indicators and mental health via dynamic dashboards.",
     github: "https://github.com/harshad912004/Mental_Health_Analysis-Finance",
@@ -92,8 +92,8 @@ const Projects = () => {
                 key={cat.id}
                 onClick={() => setFilter(cat.id)}
                 className={`px-5 py-2 rounded-full font-medium transition-all duration-300 ${filter === cat.id
-                    ? "bg-orange-500 text-gray-900"
-                    : "bg-gray-800/50 text-gray-300 border border-gray-700 hover:border-orange-500/50"
+                  ? "bg-orange-500 text-gray-900"
+                  : "bg-gray-800/50 text-gray-300 border border-gray-700 hover:border-orange-500/50"
                   }`}
               >
                 {cat.label}
