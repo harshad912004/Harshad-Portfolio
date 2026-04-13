@@ -26,7 +26,7 @@ export const Contact = () => {
           </p>
 
           <div className="space-y-6">
-            <a href="mailto:contact@example.com" className="flex items-center gap-4 text-gray-300 hover:text-orange-400 transition-colors group">
+            <a href="mailto:harshaddhongade9124@gmail.com" className="flex items-center gap-4 text-gray-300 hover:text-orange-400 transition-colors group">
               <div className="w-12 h-12 bg-gray-900 border border-gray-800 rounded-full flex items-center justify-center group-hover:border-orange-500/50 group-hover:bg-orange-500/10 transition-all">
                 <Mail size={20} />
               </div>
