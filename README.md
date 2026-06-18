@@ -1,16 +1,40 @@
-# React + Vite
+# Harshad Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+A modern, premium developer portfolio built with Next.js 16 (App Router), React, TypeScript, Tailwind CSS, and Framer Motion.
 
-Currently, two official plugins are available:
+## Prerequisites
+- Node.js 20+ (recommended)
+- npm 10+ (or Yarn)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Setup
+```bash
+# Install dependencies
+npm install
+```
 
-## React Compiler
+## Development
+```bash
+# Start the dev server (automatic hot‑reload)
+npm run dev
+```
+The app will be available at `http://localhost:3000` (or the next free port if 3000 is in use).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Production Build
+```bash
+npm run build   # builds with webpack (no SWC native binaries on Windows)
+npm start       # serves the built app
+```
 
-## Expanding the ESLint configuration
+## Important Notes
+- The `--webpack` flag is no longer needed in the scripts; they have been cleaned up.
+- If you encounter the "not a valid Win32 application" warning for `@next/swc-win32-x64-msvc`, it is safe to ignore on Windows when using the `--webpack` build mode, as the build falls back to WASM.
+- Hot reload should now reflect any changes you make to source files immediately.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Clean Build (if you run into stale caches)
+```bash
+# Remove Next.js cache and reinstall deps
+rm -rf .next node_modules package-lock.json
+npm install
+npm run dev
+```
