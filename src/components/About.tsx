@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Server, Database, Code2, ShieldAlert, Rocket, ServerCog, Coffee, FlaskConical } from "lucide-react";
-import { div } from "framer-motion/client";
 
 const About: React.FC = () => {
   return (
