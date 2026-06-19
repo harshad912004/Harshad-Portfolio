@@ -117,16 +117,16 @@ const Contact: React.FC = () => {
             </a>
 
             <a
-              href="tel:+919120040000"
+              href="tel:+919209396743"
               className="flex items-center gap-4 text-gray-300 hover:text-orange-400 transition-colors group focus-visible:ring-2 focus-visible:ring-orange-500 rounded-xl p-2 -ml-2"
-              aria-label="Call phone number +91 91200 40000"
+              aria-label="Call phone number +91 92093 96743"
             >
               <div className="w-12 h-12 bg-gray-900 border border-gray-800 rounded-xl flex items-center justify-center group-hover:border-orange-500/50 group-hover:bg-orange-500/10 transition-all">
                 <Phone size={20} />
               </div>
               <div>
                 <span className="text-xs text-gray-500 block font-mono uppercase tracking-wider">Phone</span>
-                <span className="text-base font-semibold">+91 91200 40000</span>
+                <span className="text-base font-semibold">+91 92093 96743</span>
               </div>
             </a>
 
