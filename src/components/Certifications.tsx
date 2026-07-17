@@ -65,7 +65,7 @@ const Certifications: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gray-900/40 border border-gray-800 hover:border-orange-500/30 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:-translate-y-0.5"
+              className="glass-card rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover-glow"
             >
               <div className="space-y-4">
                 <div className="flex items-start justify-between gap-5">

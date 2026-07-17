@@ -6,8 +6,10 @@
 }
 
 :root {
-  --background: #030712; /* gray-950 */
-  --foreground: #f3f4f6; /* gray-100 */
+  --background: #030712;
+  /* gray-950 */
+  --foreground: #f3f4f6;
+  /* gray-100 */
 }
 
 html {
@@ -40,7 +42,8 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #f97316; /* primary orange accent */
+  background: #f97316;
+  /* primary orange accent */
 }
 
 /* Smooth Focus States */
@@ -53,23 +56,34 @@ body {
 /* Glassmorphism Classes */
 .glass {
   background: rgba(17, 24, 39, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 .glass-card {
-  background: rgba(17, 24, 39, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.03);
+  background: linear-gradient(145deg, rgba(31, 41, 55, 0.4) 0%, rgba(17, 24, 39, 0.6) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* Animations helpers */
 .hover-glow {
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .hover-glow:hover {
-  box-shadow: 0 0 20px rgba(249, 115, 22, 0.2);
-  border-color: rgba(249, 115, 22, 0.3);
+  box-shadow: 0 0 25px rgba(249, 115, 22, 0.25);
+  border-color: rgba(249, 115, 22, 0.4);
+  transform: translateY(-2px);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #f97316, #fb923c, #fde047);
 }

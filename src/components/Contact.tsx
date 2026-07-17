@@ -185,7 +185,7 @@ const Contact: React.FC = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex-1 bg-gray-900/20 border border-gray-900 p-8 rounded-3xl backdrop-blur-sm shadow-xl"
+          className="flex-1 glass-card p-8 rounded-3xl shadow-xl"
         >
           <form className="space-y-6" onSubmit={handleFormSubmit}>
             <div>

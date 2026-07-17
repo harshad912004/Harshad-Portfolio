@@ -108,7 +108,7 @@ const Skills: React.FC = () => {
             <motion.div
               key={skill.category}
               variants={itemVariants}
-              className="group bg-gray-900/40 border border-gray-800/80 hover:border-orange-500/30 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl relative overflow-hidden"
+              className="group glass-card rounded-2xl p-6 transition-all duration-300 hover-glow relative overflow-hidden"
             >
               {/* Top card accent glow */}
               <div className={`absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r ${skill.color}`} />

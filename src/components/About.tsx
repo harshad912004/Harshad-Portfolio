@@ -29,7 +29,7 @@ const About: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7 bg-gray-900/40 border border-gray-800 backdrop-blur-md rounded-3xl p-8 md:p-10 shadow-2xl relative overflow-hidden text-gray-300 space-y-6"
+            className="lg:col-span-7 glass-card rounded-3xl p-8 md:p-10 relative overflow-hidden text-gray-300 space-y-6"
           >
             {/* Subtle glow */}
             <div className="absolute -top-32 -right-32 w-64 h-64 bg-orange-500/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -81,7 +81,7 @@ const About: React.FC = () => {
           >
             <h3 className="text-2xl font-bold text-white mb-3 pl-1">My Engineering Core</h3>
 
-            <div className="flex items-start gap-4 p-5 bg-gray-900/30 border border-gray-900 hover:border-gray-800 rounded-2xl transition-all duration-300">
+            <div className="flex items-start gap-4 p-5 glass rounded-2xl hover-glow">
               <div className="p-3 rounded-xl bg-orange-500/10 text-orange-400 border border-orange-500/20">
                 <Server size={22} />
               </div>
@@ -91,7 +91,7 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-5 bg-gray-900/30 border border-gray-900 hover:border-gray-800 rounded-2xl transition-all duration-300">
+            <div className="flex items-start gap-4 p-5 glass rounded-2xl hover-glow">
               <div className="p-3 rounded-xl bg-orange-500/10 text-orange-400 border border-orange-500/20">
                 <Database size={22} />
               </div>
@@ -101,7 +101,7 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-5 bg-gray-900/30 border border-gray-900 hover:border-gray-800 rounded-2xl transition-all duration-300">
+            <div className="flex items-start gap-4 p-5 glass rounded-2xl hover-glow">
               <div className="p-3 rounded-xl bg-orange-500/10 text-orange-400 border border-orange-500/20">
                 <Code2 size={22} />
               </div>
@@ -111,7 +111,7 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-5 bg-gray-900/30 border border-gray-900 hover:border-gray-800 rounded-2xl transition-all duration-300">
+            <div className="flex items-start gap-4 p-5 glass rounded-2xl hover-glow">
               <div className="p-3 rounded-xl bg-orange-500/10 text-orange-400 border border-orange-500/20">
                 <ShieldAlert size={22} />
               </div>

@@ -53,7 +53,7 @@ const Experience: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="relative bg-gray-900/30 border border-gray-900 hover:border-orange-500/30 rounded-3xl p-6 md:p-8 transition-all duration-350 group"
+              className="relative glass-card rounded-3xl p-6 md:p-8 transition-all duration-350 group hover-glow"
             >
               {/* Timeline Indicator Dot */}
               <div className="absolute -left-[41px] md:-left-[43px] top-9 w-5 h-5 bg-orange-500 rounded-full border-4 border-gray-950 group-hover:scale-125 transition-transform duration-300"></div>

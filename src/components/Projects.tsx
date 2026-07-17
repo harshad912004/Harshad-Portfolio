@@ -138,7 +138,7 @@ const Projects: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="bg-gray-900/40 border border-gray-800 hover:border-orange-500/30 rounded-3xl overflow-hidden shadow-xl transition-all duration-300 flex flex-col h-[580px] group relative"
+                className="glass-card hover-glow rounded-3xl overflow-hidden shadow-xl transition-all duration-300 flex flex-col h-[580px] group relative"
               >
                 {/* Project Image Header */}
                 <div className="h-44 overflow-hidden relative bg-gray-950">

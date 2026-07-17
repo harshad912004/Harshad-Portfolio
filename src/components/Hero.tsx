@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4 tracking-tight leading-none">
             Harshad Dhongade
           </h1>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-300 to-yellow-300">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gradient">
             Software Engineer
           </h2>
 
@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <a
               href="#contact"
-              className="px-8 py-3.5 bg-orange-500 hover:bg-orange-400 text-gray-950 font-bold rounded-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] flex items-center gap-2 transform hover:-translate-y-0.5 active:scale-95"
+              className="px-8 py-3.5 bg-orange-500 hover:bg-orange-400 text-gray-950 font-bold rounded-full transition-all duration-300 hover-glow flex items-center gap-2 transform hover:-translate-y-0.5 active:scale-95"
             >
               Get in Touch <ArrowRight size={18} />
             </a>
@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
                 href="https://github.com/harshad912004"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 border border-gray-800 bg-gray-900/50 hover:bg-gray-800 hover:border-orange-500/50 rounded-full text-gray-300 hover:text-orange-400 transition-all focus-visible:ring-2 focus-visible:ring-orange-500"
+                className="p-3 border border-gray-800 bg-gray-900/50 rounded-full text-gray-300 hover:text-orange-400 transition-all focus-visible:ring-2 focus-visible:ring-orange-500 hover-glow"
                 aria-label="GitHub Profile"
               >
                 <FaGithub size={22} />
@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
                 href="https://linkedin.com/in/harshad-dhongade"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 border border-gray-800 bg-gray-900/50 hover:bg-gray-800 hover:border-orange-500/50 rounded-full text-gray-300 hover:text-orange-400 transition-all focus-visible:ring-2 focus-visible:ring-orange-500"
+                className="p-3 border border-gray-800 bg-gray-900/50 rounded-full text-gray-300 hover:text-orange-400 transition-all focus-visible:ring-2 focus-visible:ring-orange-500 hover-glow"
                 aria-label="LinkedIn Profile"
               >
                 <FaLinkedin size={22} />

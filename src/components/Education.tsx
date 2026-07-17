@@ -19,7 +19,7 @@ const educationData: EducationItem[] = [
     school: "MET Institute of Engineering, Nashik (SPPU)",
     year: "2024 - 2026",
     focus: "Advanced Database Architectures, Distributed Systems, Software Engineering & Project Management, Object-Oriented Analysis & Design.",
-    details: "Developing clean production code structures, managing software deployment workflows, and constructing scalable web-oriented solutions.",
+    details: "Graduated with 8.04 CGPA (72.90%) | Final Grade: A. Developing clean production code structures, managing software deployment workflows, and constructing scalable web-oriented solutions.",
     icon: <GraduationCap size={28} />
   },
   {
@@ -54,7 +54,7 @@ const Education: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="bg-gray-900/30 border border-gray-900 hover:border-orange-500/30 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start hover:shadow-xl transition-all duration-300"
+              className="glass-card rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start transition-all duration-300 hover-glow"
             >
               <div className="p-4 bg-orange-500/10 rounded-2xl text-orange-400 flex-shrink-0 border border-orange-500/20">
                 {edu.icon}

@@ -48,14 +48,14 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${scrolled
-        ? "bg-gray-950/80 backdrop-blur-md border-b border-gray-800/50 shadow-lg py-4"
+        ? "glass py-4"
         : "bg-transparent py-6"
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex justify-between items-center">
         <a
           href="#home"
-          className="text-xl md:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-300 tracking-wider hover:scale-[1.02] active:scale-95 transition-all focus-visible:ring-2 focus-visible:ring-orange-500 rounded-lg px-2"
+          className="text-xl md:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-300 tracking-wider hover:scale-[1.02] active:scale-95 transition-all focus-visible:ring-2 focus-visible:ring-orange-500 rounded-lg px-2 hover-glow"
           aria-label="Harshad Dhongade - Home"
         >
           HARSHAD
