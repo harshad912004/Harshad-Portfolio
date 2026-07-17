@@ -19,7 +19,7 @@ const experienceData: ExperienceItem[] = [
     role: "Software Developer Intern",
     company: "Aquil Tech Labs",
     period: "Jan 2026 - Jun 2026",
-    location: "Nashik, Maharashtra, India",
+    location: "Onsite - Nashik, Maharashtra, India",
     description: "Developed and optimized robust, scalable full-stack web applications. Collaborated with team members to design high-throughput service APIs and normalized database models.",
     points: [
       "Engineered high-performance RESTful web services using Node.js and Express.js to process data operations efficiently.",
@@ -28,6 +28,19 @@ const experienceData: ExperienceItem[] = [
       "Optimized client-side rendering pathways and component lifecycles in React.js, improving layout paint speeds and lowering load bottlenecks."
     ],
     tech: ["Node.js", "Express.js", "React.js", "MySQL", "RESTful APIs", "Postman", "JWT", "Github"]
+  },
+  {
+    role: "Freelance Web Developer",
+    company: "Self-Employed - UpWork",
+    period: "Aug 2025 - Mar 2026",
+    location: "Remote (WFH)",
+    description: "Delivered custom web applications for international clients.",
+    points: [
+      "Focused on delivering custom web applications",
+      "Specialized in building responsive websites, dashboards, API integrations using React.js, Node.js, Mysql and other technologies.",
+      "Gained experience in client communication, proposal writing, and managing long & short term projects."
+    ],
+    tech: ["Client Services", "Customer Relationship Management", "Project Management", "Proposal Writing", "Self-Employement"]
   }
 ];
 
