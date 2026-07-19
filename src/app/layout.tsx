@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   description: "Professional software engineer portfolio specializing in building scalable full-stack web applications, designing RESTful APIs, and optimizing database performance.",
   keywords: ["Software Engineer", "Full Stack Developer", "Backend Developer", "Java Developer", "React Developer", "Next.js", "TypeScript"],
   authors: [{ name: "Harshad Dhongade" }],
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "Harshad Dhongade | Software Developer Portfolio",
     description: "Software Engineer specializing in building scalable full-stack web applications.",

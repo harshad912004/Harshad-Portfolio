@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
           <p className="text-lg">
-            &copy; {new Date().getFullYear()} Harshad Dhongade. All rights reserved.
+            &copy; 2024 - {new Date().getFullYear()} Harshad Dhongade. All rights reserved.
           </p>
         </div>
 

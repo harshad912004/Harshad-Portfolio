@@ -21,7 +21,7 @@ interface Project {
 const projectsData: Project[] = [
   {
     title: "SteelMart",
-    image: "/steelmart.png",
+    image: "/Projects/steelmart.png",
     tech: ["Node.js", "Express.js", "MySQL", "React.js"],
     desc: "Developed a Full Stack ERP & CRM Portal by using Node.js, Express.js, MySQL, React.js which enables secured communication between Admin, General Contractors and Vendors online. Designed and Implemented REST APIs for managing projects, authenticating users and processing bids that helps in maintaining efficient communication between frontend & backend. Postman used for testing APIs. Added JSON Web Token (JWT) based Authentication & Role Based Access Control (RBAC) to provide secure, role-specific access to the application. Also added password encryption and authentication process. Enhanced performance of the application through optimization of MySQL queries and schemas. Collaborated with the development team using Git/GitHub and followed Agile methodologies.",
     features: [
@@ -35,7 +35,7 @@ const projectsData: Project[] = [
   },
   {
     title: "CampusEats",
-    image: "/CampusEats.png",
+    image: "/Projects/CampusEats.png",
     tech: ["Python (Flask)", "MySQL", "Tailwind CSS", "JavaScript"],
     desc: "An online food ordering and real-time vendor dispatch system tailored for university canteens.",
     features: [
@@ -50,7 +50,7 @@ const projectsData: Project[] = [
   },
   {
     title: "CyberGuardian",
-    image: "/Cyber_Guardian.png",
+    image: "/Projects/Cyber_Guardian.png",
     tech: ["Java (JSP/Servlet)", "JDBC", "MySQL", "Tailwind CSS"],
     desc: "A secure cyber-awareness e-learning full-stack platform featuring interactive quiz engines and session audits.",
     features: [
@@ -65,7 +65,7 @@ const projectsData: Project[] = [
   },
   {
     title: "CareConnect",
-    image: "/Care_Connect.png",
+    image: "/Projects/Care_Connect.png",
     tech: ["Java", "JDBC", "MySQL", "HTML5", "CSS3"],
     desc: "A medical appointment booking and electronic patient health record management application.",
     features: [
