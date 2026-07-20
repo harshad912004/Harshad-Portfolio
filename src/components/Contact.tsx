@@ -5,12 +5,14 @@ import { motion } from "framer-motion";
 import { Mail, Phone, ExternalLink, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
 interface FormData {
   name: string;
   email: string;
   subject: string;
   message: string;
+  timezone: string;
 }
 
 interface FormState {
@@ -23,7 +25,8 @@ const Contact: React.FC = () => {
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
+    timezone: ""
   });
 
   const [state, setState] = useState<FormState>({
@@ -74,7 +77,7 @@ const Contact: React.FC = () => {
           ? "Message simulation sent successfully!"
           : "Thank you! Your message has been sent successfully."
       });
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      setFormData({ name: "", email: "", subject: "", message: "", timezone: "" });
     } catch (err: any) {
       setState({ status: "error", message: err.message || "Failed to deliver. Please try again later." });
     }
