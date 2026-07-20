@@ -4,6 +4,7 @@ import React, { useState, ChangeEvent, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, ExternalLink, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 interface FormData {
   name: string;
@@ -55,7 +56,7 @@ const Contact: React.FC = () => {
     setState({ status: "loading", message: "Sending your message..." });
 
     try {
-      const response = await fetch("/api/send", {
+      const response = await fetch(`${API_URL}/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
