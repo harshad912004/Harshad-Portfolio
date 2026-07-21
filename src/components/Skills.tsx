@@ -8,7 +8,6 @@ interface SkillCategory {
   category: string;
   icon: React.ReactNode;
   items: string[];
-  color: string;
 }
 
 const skillCategories: SkillCategory[] = [
@@ -16,55 +15,46 @@ const skillCategories: SkillCategory[] = [
     category: "Programming Languages",
     icon: <Terminal size={24} />,
     items: ["Java", "Python", "JavaScript"],
-    color: "from-blue-600 to-cyan-500",
   },
   {
     category: "Backend Technologies & Frameworks",
     icon: <Server size={24} />,
     items: ["Node.js", "Express.js", "Spring Boot", "REST APIs", "JWT Authentication"],
-    color: "from-emerald-600 to-teal-500",
   },
   {
     category: "Frontend Technologies & Frameworks",
     icon: <Layout size={24} />,
     items: ["React.js", "Tailwind CSS", "Bootstrap", "HTML5", "CSS3"],
-    color: "from-orange-600 to-amber-500",
   },
   {
     category: "Databases",
     icon: <Database size={24} />,
     items: ["MySQL", "PostgreSQL", "SQL", "MongoDB", "Database Design"],
-    color: "from-red-600 to-orange-500",
   },
   {
     category: "Testing",
     icon: <Bug size={24} />,
     items: ["Manual Testing", "Automation Testing", "API Testing", "AI Testing"],
-    color: "from-sky-600 to-blue-500",
   },
   {
     category: "Testing Frameworks",
     icon: <FlaskConical size={24} />,
     items: ["Selenium", "JUnit", "TestNG", "PyTest"],
-    color: "from-yellow-600 to-amber-500",
   },
   {
     category: "Software Development & Testing Concepts",
     icon: <Code2 size={24} />,
     items: ["SDLC", "STLC", "Agile", "Git Workflow", "Debugging"],
-    color: "from-purple-600 to-indigo-500",
   },
   {
     category: "Tools & Platforms",
     icon: <Wrench size={24} />,
     items: ["Git", "GitHub", "Postman", "Jira"],
-    color: "from-violet-600 to-fuchsia-500",
   },
   {
     category: "Soft Skills",
     icon: <Users size={24} />,
     items: ["Problem Solving", "Team Collaboration", "Adaptability", "Communication"],
-    color: "from-rose-600 to-pink-500",
   },
 ];
 
@@ -85,7 +75,7 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="py-24 px-6 md:px-10 bg-gray-950 border-t border-gray-900">
+    <section id="skills" className="py-24 px-6 md:px-10 bg-[#0d1b2a] border-t border-[#415a77]/40">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -93,8 +83,8 @@ const Skills: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4">Skills</h2>
-          <div className="w-20 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
+          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[#e0e1dd] mb-4">Skills</h2>
+          <div className="w-20 h-1.5 bg-[#ff5d5d] mx-auto rounded-full"></div>
         </motion.div>
 
         <motion.div
@@ -111,20 +101,20 @@ const Skills: React.FC = () => {
               className="group glass-card rounded-2xl p-6 transition-all duration-300 hover-glow relative overflow-hidden"
             >
               {/* Top card accent glow */}
-              <div className={`absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r ${skill.color}`} />
+              <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#ff5d5d] via-[#ff8585] to-[#415a77]" />
 
               <div className="flex items-center space-x-4 mb-6">
-                <div className={`p-3 rounded-xl bg-gradient-to-br ${skill.color} text-white shadow-md`}>
+                <div className="p-3 rounded-xl bg-[#ff5d5d]/10 text-[#ff5d5d] border border-[#ff5d5d]/30 shadow-md">
                   {skill.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white tracking-wide">{skill.category}</h3>
+                <h3 className="text-xl font-bold font-heading text-[#e0e1dd] tracking-wide">{skill.category}</h3>
               </div>
 
               <div className="flex flex-wrap gap-2">
                 {skill.items.map((item) => (
                   <span
                     key={item}
-                    className="px-3.5 py-1.5 bg-gray-950 border border-gray-800 rounded-lg text-sm font-medium text-gray-300 group-hover:border-gray-700 transition-colors"
+                    className="px-3.5 py-1.5 bg-[#1b263b] border border-[#415a77]/60 rounded-lg text-sm font-medium text-[#e0e1dd] group-hover:border-[#ff5d5d]/40 group-hover:text-[#ff5d5d] transition-colors"
                   >
                     {item}
                   </span>

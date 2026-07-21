@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Award, ExternalLink, ShieldCheck, FileSpreadsheet } from "lucide-react";
+import { Award, ExternalLink, ShieldCheck } from "lucide-react";
 
 interface Certificate {
   title: string;
@@ -45,7 +45,7 @@ const certificationsData: Certificate[] = [
 
 const Certifications: React.FC = () => {
   return (
-    <section id="certifications" className="py-24 px-6 md:px-10 bg-black border-t border-gray-900">
+    <section id="certifications" className="py-24 px-6 md:px-10 bg-[#0d1b2a] border-t border-[#415a77]/40">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,8 +53,8 @@ const Certifications: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Certifications & Publications</h2>
-          <div className="w-20 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
+          <h2 className="text-4xl md:text-5xl font-extrabold font-heading text-[#e0e1dd] mb-4">Certifications & Publications</h2>
+          <div className="w-20 h-1.5 bg-[#ff5d5d] mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -69,14 +69,14 @@ const Certifications: React.FC = () => {
             >
               <div className="space-y-4">
                 <div className="flex items-start justify-between gap-5">
-                  <div className="p-3 rounded-xl bg-orange-500/10 text-orange-400 border border-orange-500/20">
+                  <div className="p-3 rounded-xl bg-[#ff5d5d]/10 text-[#ff5d5d] border border-[#ff5d5d]/30">
                     <Award size={22} />
                   </div>
                   <a
                     href={cert.fileUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-xs font-semibold text-gray-400 hover:text-orange-400 transition-colors py-1 focus-visible:ring-1 focus-visible:ring-orange-500 rounded px-1.5"
+                    className="flex items-center gap-1 text-xs font-semibold text-[#e0e1dd]/80 hover:text-[#ff5d5d] transition-colors py-1 focus-visible:ring-1 focus-visible:ring-[#ff5d5d] rounded px-1.5"
                     aria-label={`View verification document for ${cert.title}`}
                   >
                     View Document <ExternalLink size={15} />
@@ -84,21 +84,21 @@ const Certifications: React.FC = () => {
                 </div>
 
                 <div>
-                  <h2 className="text-lg font-bold text-white leading-snug hover:text-orange-400 transition-colors">
+                  <h2 className="text-lg font-bold font-heading text-[#e0e1dd] leading-snug hover:text-[#ff5d5d] transition-colors">
                     {cert.title}
                   </h2>
-                  <p className="text-m text-gray-400 font-medium mt-1">{cert.issuer}</p>
+                  <p className="text-m text-[#e0e1dd]/70 font-medium mt-1">{cert.issuer}</p>
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-gray-800/60">
+              <div className="mt-6 pt-4 border-t border-[#415a77]/40">
                 <div className="flex flex-wrap gap-1.5">
                   {cert.skillsValidated.map(skill => (
                     <span
                       key={skill}
-                      className="flex items-center gap-1 text-[11px] font-medium px-2 py-0.5 bg-gray-950 text-gray-300 border border-gray-850 rounded"
+                      className="flex items-center gap-1 text-[11px] font-medium px-2 py-0.5 bg-[#1b263b] text-[#e0e1dd] border border-[#415a77]/50 rounded"
                     >
-                      <ShieldCheck size={15} className="text-orange-500" />
+                      <ShieldCheck size={15} className="text-[#ff5d5d]" />
                       {skill}
                     </span>
                   ))}

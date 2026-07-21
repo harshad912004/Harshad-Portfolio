@@ -2,10 +2,9 @@
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, ExternalLink, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { Mail, Phone, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
-const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
 interface FormData {
   name: string;
@@ -84,9 +83,9 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 md:px-10 bg-black relative overflow-hidden border-t border-gray-900">
+    <section id="contact" className="py-24 px-6 md:px-10 bg-[#0d1b2a] relative overflow-hidden border-t border-[#415a77]/40">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-[30vw] h-[30vw] bg-orange-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[30vw] h-[30vw] bg-[#ff5d5d]/10 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20">
 
@@ -98,38 +97,38 @@ const Contact: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="flex-1"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4">Let's Connect</h2>
-          <div className="w-20 h-1.5 bg-orange-500 rounded-full mb-8"></div>
+          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[#e0e1dd] mb-4">Let's Connect</h2>
+          <div className="w-20 h-1.5 bg-[#ff5d5d] rounded-full mb-8"></div>
 
-          <p className="text-gray-400 text-lg mb-10 leading-relaxed">
-            I am currently looking for new opportunities in Software Developement, Full Stack, and Backend roles. Whether you have a project idea or just want to discuss architectures, feel free to reach out!
+          <p className="text-[#e0e1dd]/80 text-lg mb-10 leading-relaxed">
+            I am currently looking for new opportunities in Software Development, Full Stack, and Backend roles. Whether you have a project idea or just want to discuss architectures, feel free to reach out!
           </p>
 
           <div className="space-y-6">
             <a
               href="mailto:harshaddhongade9124@gmail.com"
-              className="flex items-center gap-4 text-gray-300 hover:text-orange-400 transition-colors group focus-visible:ring-2 focus-visible:ring-orange-500 rounded-xl p-2 -ml-2"
+              className="flex items-center gap-4 text-[#e0e1dd] hover:text-[#ff5d5d] transition-colors group focus-visible:ring-2 focus-visible:ring-[#ff5d5d] rounded-xl p-2 -ml-2"
               aria-label="Send email to harshaddhongade9124@gmail.com"
             >
-              <div className="w-12 h-12 bg-gray-900 border border-gray-800 rounded-xl flex items-center justify-center group-hover:border-orange-500/50 group-hover:bg-orange-500/10 transition-all">
+              <div className="w-12 h-12 bg-[#1b263b] border border-[#415a77]/50 rounded-xl flex items-center justify-center text-[#ff5d5d] group-hover:border-[#ff5d5d]/50 group-hover:bg-[#ff5d5d]/10 transition-all">
                 <Mail size={20} />
               </div>
               <div>
-                <span className="text-xs text-gray-500 block font-mono uppercase tracking-wider">Email</span>
+                <span className="text-xs text-[#415a77] block font-mono uppercase tracking-wider">Email</span>
                 <span className="text-base font-semibold">harshaddhongade9124@gmail.com</span>
               </div>
             </a>
 
             <a
               href="tel:+919209396743"
-              className="flex items-center gap-4 text-gray-300 hover:text-orange-400 transition-colors group focus-visible:ring-2 focus-visible:ring-orange-500 rounded-xl p-2 -ml-2"
+              className="flex items-center gap-4 text-[#e0e1dd] hover:text-[#ff5d5d] transition-colors group focus-visible:ring-2 focus-visible:ring-[#ff5d5d] rounded-xl p-2 -ml-2"
               aria-label="Call phone number +91 92093 96743"
             >
-              <div className="w-12 h-12 bg-gray-900 border border-gray-800 rounded-xl flex items-center justify-center group-hover:border-orange-500/50 group-hover:bg-orange-500/10 transition-all">
+              <div className="w-12 h-12 bg-[#1b263b] border border-[#415a77]/50 rounded-xl flex items-center justify-center text-[#ff5d5d] group-hover:border-[#ff5d5d]/50 group-hover:bg-[#ff5d5d]/10 transition-all">
                 <Phone size={20} />
               </div>
               <div>
-                <span className="text-xs text-gray-500 block font-mono uppercase tracking-wider">Phone</span>
+                <span className="text-xs text-[#415a77] block font-mono uppercase tracking-wider">Phone</span>
                 <span className="text-base font-semibold">+91 92093 96743</span>
               </div>
             </a>
@@ -138,14 +137,14 @@ const Contact: React.FC = () => {
               href="https://linkedin.com/in/harshad-dhongade"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 text-gray-300 hover:text-orange-400 transition-colors group focus-visible:ring-2 focus-visible:ring-orange-500 rounded-xl p-2 -ml-2"
+              className="flex items-center gap-4 text-[#e0e1dd] hover:text-[#ff5d5d] transition-colors group focus-visible:ring-2 focus-visible:ring-[#ff5d5d] rounded-xl p-2 -ml-2"
               aria-label="Visit LinkedIn profile"
             >
-              <div className="w-12 h-12 bg-gray-900 border border-gray-800 rounded-xl flex items-center justify-center group-hover:border-orange-500/50 group-hover:bg-orange-500/10 transition-all">
+              <div className="w-12 h-12 bg-[#1b263b] border border-[#415a77]/50 rounded-xl flex items-center justify-center text-[#ff5d5d] group-hover:border-[#ff5d5d]/50 group-hover:bg-[#ff5d5d]/10 transition-all">
                 <FaLinkedin size={20} />
               </div>
               <div>
-                <span className="text-xs text-gray-500 block font-mono uppercase tracking-wider">LinkedIn</span>
+                <span className="text-xs text-[#415a77] block font-mono uppercase tracking-wider">LinkedIn</span>
                 <span className="text-base font-semibold">linkedin.com/in/harshad-dhongade</span>
               </div>
             </a>
@@ -154,14 +153,14 @@ const Contact: React.FC = () => {
               href="https://github.com/harshad912004"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 text-gray-300 hover:text-orange-400 transition-colors group focus-visible:ring-2 focus-visible:ring-orange-500 rounded-xl p-2 -ml-2"
+              className="flex items-center gap-4 text-[#e0e1dd] hover:text-[#ff5d5d] transition-colors group focus-visible:ring-2 focus-visible:ring-[#ff5d5d] rounded-xl p-2 -ml-2"
               aria-label="Visit GitHub profile"
             >
-              <div className="w-12 h-12 bg-gray-900 border border-gray-800 rounded-xl flex items-center justify-center group-hover:border-orange-500/50 group-hover:bg-orange-500/10 transition-all">
+              <div className="w-12 h-12 bg-[#1b263b] border border-[#415a77]/50 rounded-xl flex items-center justify-center text-[#ff5d5d] group-hover:border-[#ff5d5d]/50 group-hover:bg-[#ff5d5d]/10 transition-all">
                 <FaGithub size={20} />
               </div>
               <div>
-                <span className="text-xs text-gray-500 block font-mono uppercase tracking-wider">GitHub</span>
+                <span className="text-xs text-[#415a77] block font-mono uppercase tracking-wider">GitHub</span>
                 <span className="text-base font-semibold">github.com/harshad912004</span>
               </div>
             </a>
@@ -169,14 +168,14 @@ const Contact: React.FC = () => {
             <a
               href="/Harshad_Resume_Software_Development.pdf"
               download
-              className="flex items-center gap-4 text-gray-300 hover:text-orange-400 transition-colors group focus-visible:ring-2 focus-visible:ring-orange-500 rounded-xl p-2 -ml-2"
+              className="flex items-center gap-4 text-[#e0e1dd] hover:text-[#ff5d5d] transition-colors group focus-visible:ring-2 focus-visible:ring-[#ff5d5d] rounded-xl p-2 -ml-2"
               aria-label="Download Software Developer Resume"
             >
-              <div className="w-12 h-12 bg-gray-900 border border-gray-800 rounded-xl flex items-center justify-center group-hover:border-orange-500/50 group-hover:bg-orange-500/10 transition-all">
+              <div className="w-12 h-12 bg-[#1b263b] border border-[#415a77]/50 rounded-xl flex items-center justify-center text-[#ff5d5d] group-hover:border-[#ff5d5d]/50 group-hover:bg-[#ff5d5d]/10 transition-all">
                 <FaFileDownload size={20} />
               </div>
               <div>
-                <span className="text-xs text-gray-500 block font-mono uppercase tracking-wider">Resume</span>
+                <span className="text-xs text-[#415a77] block font-mono uppercase tracking-wider">Resume</span>
                 <span className="text-base font-semibold">Download Software Developer PDF</span>
               </div>
             </a>
@@ -193,63 +192,63 @@ const Contact: React.FC = () => {
         >
           <form className="space-y-6" onSubmit={handleFormSubmit}>
             <div>
-              <label htmlFor="name" className="block text-sm font-semibold text-gray-400 mb-2">Your Name</label>
+              <label htmlFor="name" className="block text-sm font-semibold text-[#e0e1dd]/70 mb-2">Your Name</label>
               <input
                 type="text"
                 id="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-gray-950 border border-gray-800 rounded-xl text-white transition-all duration-300 hover:border-gray-700"
+                className="w-full px-4 py-3 bg-[#1b263b] border border-[#415a77]/50 rounded-xl text-[#e0e1dd] transition-all duration-300 hover:border-[#ff5d5d]/50 focus:border-[#ff5d5d]"
                 disabled={state.status === "loading"}
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-gray-400 mb-2">Your Email</label>
+              <label htmlFor="email" className="block text-sm font-semibold text-[#e0e1dd]/70 mb-2">Your Email</label>
               <input
                 type="email"
                 id="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-gray-950 border border-gray-800 rounded-xl text-white transition-all duration-300 hover:border-gray-700"
+                className="w-full px-4 py-3 bg-[#1b263b] border border-[#415a77]/50 rounded-xl text-[#e0e1dd] transition-all duration-300 hover:border-[#ff5d5d]/50 focus:border-[#ff5d5d]"
                 disabled={state.status === "loading"}
               />
             </div>
 
             <div>
-              <label htmlFor="subject" className="block text-sm font-semibold text-gray-400 mb-2">Subject</label>
+              <label htmlFor="subject" className="block text-sm font-semibold text-[#e0e1dd]/70 mb-2">Subject</label>
               <input
                 type="text"
                 id="subject"
                 value={formData.subject}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-gray-950 border border-gray-800 rounded-xl text-white transition-all duration-300 hover:border-gray-700"
+                className="w-full px-4 py-3 bg-[#1b263b] border border-[#415a77]/50 rounded-xl text-[#e0e1dd] transition-all duration-300 hover:border-[#ff5d5d]/50 focus:border-[#ff5d5d]"
                 disabled={state.status === "loading"}
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-semibold text-gray-400 mb-2">Message</label>
+              <label htmlFor="message" className="block text-sm font-semibold text-[#e0e1dd]/70 mb-2">Message</label>
               <textarea
                 id="message"
                 rows={4}
                 value={formData.message}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-gray-950 border border-gray-800 rounded-xl text-white transition-all duration-300 hover:border-gray-700 resize-none"
+                className="w-full px-4 py-3 bg-[#1b263b] border border-[#415a77]/50 rounded-xl text-[#e0e1dd] transition-all duration-300 hover:border-[#ff5d5d]/50 focus:border-[#ff5d5d] resize-none"
                 disabled={state.status === "loading"}
               />
             </div>
 
             {/* Alert message displays */}
             {state.status === "success" && (
-              <div className="flex items-center gap-3 p-4 bg-emerald-500/10 border border-emerald-500/20 text-emerald-450 rounded-xl text-sm" role="alert">
+              <div className="flex items-center gap-3 p-4 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-xl text-sm" role="alert">
                 <CheckCircle2 size={20} className="flex-shrink-0" />
                 <span>{state.message}</span>
               </div>
             )}
 
             {state.status === "error" && (
-              <div className="flex items-center gap-3 p-4 bg-rose-500/10 border border-rose-500/20 text-rose-400 rounded-xl text-sm" role="alert">
+              <div className="flex items-center gap-3 p-4 bg-rose-500/10 border border-rose-500/30 text-rose-400 rounded-xl text-sm" role="alert">
                 <AlertCircle size={20} className="flex-shrink-0" />
                 <span>{state.message}</span>
               </div>
@@ -258,7 +257,7 @@ const Contact: React.FC = () => {
             <button
               type="submit"
               disabled={state.status === "loading"}
-              className="w-full py-4 bg-orange-500 text-gray-950 hover:bg-orange-400 disabled:bg-gray-800 disabled:text-gray-500 font-bold rounded-xl flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(249,115,22,0.3)] transition-all duration-300 active:scale-95 focus-visible:ring-2 focus-visible:ring-orange-500 cursor-pointer disabled:cursor-not-allowed"
+              className="w-full py-4 bg-[#ff5d5d] text-[#0d1b2a] hover:bg-[#ff8585] disabled:bg-[#1b263b] disabled:text-[#415a77] font-bold rounded-xl flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(255,93,93,0.3)] transition-all duration-300 active:scale-95 focus-visible:ring-2 focus-visible:ring-[#ff5d5d] cursor-pointer disabled:cursor-not-allowed font-heading"
             >
               {state.status === "loading" ? (
                 <>

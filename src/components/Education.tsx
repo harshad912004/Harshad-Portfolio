@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { GraduationCap, BookOpen, Landmark } from "lucide-react";
+import { GraduationCap, BookOpen } from "lucide-react";
 
 interface EducationItem {
   degree: string;
@@ -34,7 +34,7 @@ const educationData: EducationItem[] = [
 
 const Education: React.FC = () => {
   return (
-    <section id="education" className="py-24 px-6 md:px-10 bg-gradient-to-b from-gray-950 to-black border-t border-gray-900">
+    <section id="education" className="py-24 px-6 md:px-10 bg-[#0d1b2a] border-t border-[#415a77]/40">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,8 +42,8 @@ const Education: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4">Education</h2>
-          <div className="w-20 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
+          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[#e0e1dd] mb-4">Education</h2>
+          <div className="w-20 h-1.5 bg-[#ff5d5d] mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="space-y-8">
@@ -56,25 +56,25 @@ const Education: React.FC = () => {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               className="glass-card rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start transition-all duration-300 hover-glow"
             >
-              <div className="p-4 bg-orange-500/10 rounded-2xl text-orange-400 flex-shrink-0 border border-orange-500/20">
+              <div className="p-4 bg-[#ff5d5d]/10 rounded-2xl text-[#ff5d5d] flex-shrink-0 border border-[#ff5d5d]/30">
                 {edu.icon}
               </div>
 
               <div className="flex-1">
                 <div className="flex flex-wrap items-baseline justify-between gap-2 mb-2">
-                  <h3 className="text-xl md:text-2xl font-bold text-white leading-snug">{edu.degree}</h3>
-                  <span className="text-gray-500 font-mono text-sm md:text-base font-semibold">{edu.year}</span>
+                  <h3 className="text-xl md:text-2xl font-bold font-heading text-[#e0e1dd] leading-snug">{edu.degree}</h3>
+                  <span className="text-[#ff5d5d] font-mono text-sm md:text-base font-semibold">{edu.year}</span>
                 </div>
 
-                <h4 className="text-lg text-orange-450 font-medium mb-3">{edu.school}</h4>
+                <h4 className="text-lg text-[#ff5d5d] font-heading font-medium mb-3">{edu.school}</h4>
 
-                <div className="space-y-2.5 text-sm md:text-base text-gray-300">
+                <div className="space-y-2.5 text-sm md:text-base text-[#e0e1dd]/80">
                   <p className="leading-relaxed">
-                    <strong className="text-gray-400 text-xs font-mono uppercase tracking-wider block mb-1">Focus Areas:</strong>
+                    <strong className="text-[#415a77] text-xs font-mono uppercase tracking-wider block mb-1">Focus Areas:</strong>
                     {edu.focus}
                   </p>
-                  <p className="leading-relaxed text-gray-400">
-                    <strong className="text-gray-400 text-xs font-mono uppercase tracking-wider block mb-1">Details:</strong>
+                  <p className="leading-relaxed text-[#e0e1dd]/70">
+                    <strong className="text-[#415a77] text-xs font-mono uppercase tracking-wider block mb-1">Details:</strong>
                     {edu.details}
                   </p>
                 </div>

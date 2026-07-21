@@ -41,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable} ${firaCode.variable}`}>
-      <body className="font-sans antialiased bg-gray-950 text-gray-150 min-h-screen selection:bg-orange-550 selection:text-gray-950">
+      <body className="font-sans antialiased bg-[#0d1b2a] text-[#e0e1dd] min-h-screen selection:bg-[#ff5d5d] selection:text-[#0d1b2a]">
         {children}
       </body>
     </html>
