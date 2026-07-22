@@ -45,7 +45,7 @@ const certificationsData: Certificate[] = [
 
 const Certifications: React.FC = () => {
   return (
-    <section id="certifications" className="py-24 px-6 md:px-10 bg-[#0d1b2a] border-t border-[#415a77]/40">
+    <section id="certifications" className="py-24 px-6 md:px-10 bg-[var(--background)] border-t border-[var(--border-slate)]/40">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,8 +53,8 @@ const Certifications: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold font-heading text-[#e0e1dd] mb-4">Certifications & Publications</h2>
-          <div className="w-20 h-1.5 bg-[#ff5d5d] mx-auto rounded-full"></div>
+          <h2 className="text-4xl md:text-5xl font-extrabold font-heading text-[var(--foreground)] mb-4">Certifications & Publications</h2>
+          <div className="w-20 h-1.5 bg-[var(--accent-coral)] mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -76,7 +76,7 @@ const Certifications: React.FC = () => {
                     href={cert.fileUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-xs font-semibold text-[#e0e1dd]/80 hover:text-[#ff5d5d] transition-colors py-1 focus-visible:ring-1 focus-visible:ring-[#ff5d5d] rounded px-1.5"
+                    className="flex items-center gap-1 text-xs font-semibold text-[var(--foreground)]/80 hover:text-[var(--accent-coral)] transition-colors py-1 focus-visible:ring-1 focus-visible:ring-[var(--accent-coral)] rounded px-1.5"
                     aria-label={`View verification document for ${cert.title}`}
                   >
                     View Document <ExternalLink size={15} />
@@ -84,19 +84,19 @@ const Certifications: React.FC = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-bold font-heading text-[#e0e1dd] leading-snug hover:text-[#ff5d5d] transition-colors">
+                  <h3 className="text-lg font-bold font-heading text-[var(--foreground)] leading-snug hover:text-[var(--accent-coral)] transition-colors">
                     {cert.title}
                   </h3>
-                  <p className="text-m text-[#e0e1dd]/70 font-medium mt-1">{cert.issuer}</p>
+                  <p className="text-m text-[var(--foreground)]/70 font-medium mt-1">{cert.issuer}</p>
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-[#415a77]/40">
+              <div className="mt-6 pt-4 border-t border-[var(--border-slate)]/40">
                 <div className="flex flex-wrap gap-1.5">
                   {cert.skillsValidated.map(skill => (
                     <span
                       key={skill}
-                      className="flex items-center gap-1 text-[11px] font-medium px-2 py-0.5 bg-[#1b263b] text-[#e0e1dd] border border-[#415a77]/50 rounded"
+                      className="flex items-center gap-1 text-[11px] font-medium px-2 py-0.5 bg-[var(--bg-card)] text-[var(--foreground)] border border-[var(--border-slate)]/50 rounded"
                     >
                       <ShieldCheck size={15} className="text-[#ff5d5d]" />
                       {skill}

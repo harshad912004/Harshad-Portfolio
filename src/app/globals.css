@@ -19,18 +19,19 @@
 @theme {
   --font-heading: 'KIAVA', 'Cinzel', 'Playfair Display', Georgia, serif;
   --font-sans: 'Anoother', 'Inter', 'Outfit', system-ui, -apple-system, sans-serif;
-  --color-ink-dark: #0d1b2a;
-  --color-ink-card: #1b263b;
-  --color-slate-blue: #415a77;
-  --color-platinum: #e0e1dd;
+  --color-ink-dark: #0C0A00;
+  --color-ink-card: #F3EDE6;
+  --color-slate-blue: #C9B8A3;
+  --color-platinum: #FAF5EF;
   --color-coral: #ff5d5d;
 }
 
 :root {
-  --background: #0d1b2a;
-  --bg-card: #1b263b;
-  --border-slate: #415a77;
-  --foreground: #e0e1dd;
+  --background: #FAF5EF;
+  --bg-card: #F3EDE6;
+  --border-slate: #C9B8A3;
+  --foreground: #0C0A00;
+  --foreground-soft: #5A5248;
   --accent-coral: #ff5d5d;
 }
 
@@ -50,7 +51,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6, .font-heading {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
   font-family: 'KIAVA', 'Cinzel', 'Playfair Display', Georgia, serif;
 }
 
@@ -60,12 +67,12 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0d1b2a;
+  background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1b263b;
-  border: 1px solid #415a77;
+  background: var(--border-slate);
+  border: 1px solid rgba(12, 10, 0, 0.12);
   border-radius: 4px;
 }
 
@@ -82,19 +89,19 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 /* Glassmorphism Classes */
 .glass {
-  background: rgba(27, 38, 59, 0.85);
+  background: rgba(243, 237, 230, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(65, 90, 119, 0.4);
-  box-shadow: 0 8px 32px 0 rgba(13, 27, 42, 0.5);
+  border-bottom: 1px solid rgba(201, 184, 163, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(12, 10, 0, 0.08);
 }
 
 .glass-card {
-  background: linear-gradient(145deg, rgba(27, 38, 59, 0.85) 0%, rgba(13, 27, 42, 0.95) 100%);
+  background: linear-gradient(145deg, rgba(243, 237, 230, 0.94) 0%, rgba(250, 245, 239, 0.98) 100%);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(65, 90, 119, 0.35);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(201, 184, 163, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(12, 10, 0, 0.06);
 }
 
 .glass-card:hover {
@@ -107,7 +114,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 25px rgba(255, 93, 93, 0.3);
+  box-shadow: 0 0 25px rgba(255, 93, 93, 0.16);
   border-color: rgba(255, 93, 93, 0.5);
   transform: translateY(-2px);
 }
@@ -116,5 +123,5 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right, #ff5d5d, #ff8585, #e0e1dd);
+  background-image: linear-gradient(to right, #ff5d5d, #d86c6c, #0C0A00);
 }

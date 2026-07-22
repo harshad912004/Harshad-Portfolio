@@ -75,7 +75,7 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="py-24 px-6 md:px-10 bg-[#0d1b2a] border-t border-[#415a77]/40">
+    <section id="skills" className="py-24 px-6 md:px-10 bg-[var(--background)] border-t border-[var(--border-slate)]/40">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -83,8 +83,8 @@ const Skills: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[#e0e1dd] mb-4">Technical Skills & Expertise</h2>
-          <div className="w-20 h-1.5 bg-[#ff5d5d] mx-auto rounded-full"></div>
+          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[var(--foreground)] mb-4">Technical Skills & Expertise</h2>
+          <div className="w-20 h-1.5 bg-[var(--accent-coral)] mx-auto rounded-full"></div>
         </motion.div>
 
         <motion.div
@@ -101,20 +101,20 @@ const Skills: React.FC = () => {
               className="group glass-card rounded-2xl p-6 transition-all duration-300 hover-glow relative overflow-hidden"
             >
               {/* Top card accent glow */}
-              <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#ff5d5d] via-[#ff8585] to-[#415a77]" />
+              <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[var(--accent-coral)] via-[#ff8585] to-[var(--border-slate)]" />
 
               <div className="flex items-center space-x-4 mb-6">
                 <div className="p-3 rounded-xl bg-[#ff5d5d]/10 text-[#ff5d5d] border border-[#ff5d5d]/30 shadow-md">
                   {skill.icon}
                 </div>
-                <h3 className="text-xl font-bold font-heading text-[#e0e1dd] tracking-wide">{skill.category}</h3>
+                <h3 className="text-xl font-bold font-heading text-[var(--foreground)] tracking-wide">{skill.category}</h3>
               </div>
 
               <div className="flex flex-wrap gap-2">
                 {skill.items.map((item) => (
                   <span
                     key={item}
-                    className="px-3.5 py-1.5 bg-[#1b263b] border border-[#415a77]/60 rounded-lg text-sm font-medium text-[#e0e1dd] group-hover:border-[#ff5d5d]/40 group-hover:text-[#ff5d5d] transition-colors"
+                    className="px-3.5 py-1.5 bg-[var(--bg-card)] border border-[var(--border-slate)]/60 rounded-lg text-sm font-medium text-[var(--foreground)] group-hover:border-[var(--accent-coral)]/40 group-hover:text-[var(--accent-coral)] transition-colors"
                   >
                     {item}
                   </span>

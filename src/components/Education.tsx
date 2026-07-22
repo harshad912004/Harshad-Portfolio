@@ -34,7 +34,7 @@ const educationData: EducationItem[] = [
 
 const Education: React.FC = () => {
   return (
-    <section id="education" className="py-24 px-6 md:px-10 bg-[#0d1b2a] border-t border-[#415a77]/40">
+    <section id="education" className="py-24 px-6 md:px-10 bg-[var(--background)] border-t border-[var(--border-slate)]/40">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,8 +42,8 @@ const Education: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[#e0e1dd] mb-4">Education & Qualifications</h2>
-          <div className="w-20 h-1.5 bg-[#ff5d5d] mx-auto rounded-full"></div>
+          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[var(--foreground)] mb-4">Education & Qualifications</h2>
+          <div className="w-20 h-1.5 bg-[var(--accent-coral)] mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="space-y-8">
@@ -62,19 +62,19 @@ const Education: React.FC = () => {
 
               <div className="flex-1">
                 <div className="flex flex-wrap items-baseline justify-between gap-2 mb-2">
-                  <h3 className="text-xl md:text-2xl font-bold font-heading text-[#e0e1dd] leading-snug">{edu.degree}</h3>
-                  <span className="text-[#ff5d5d] font-mono text-sm md:text-base font-semibold">{edu.year}</span>
+                  <h3 className="text-xl md:text-2xl font-bold font-heading text-[var(--foreground)] leading-snug">{edu.degree}</h3>
+                  <span className="text-[var(--accent-coral)] font-mono text-sm md:text-base font-semibold">{edu.year}</span>
                 </div>
 
-                <h4 className="text-lg text-[#ff5d5d] font-heading font-medium mb-3">{edu.school}</h4>
+                <h4 className="text-lg text-[var(--accent-coral)] font-heading font-medium mb-3">{edu.school}</h4>
 
-                <div className="space-y-2.5 text-sm md:text-base text-[#e0e1dd]/80">
+                <div className="space-y-2.5 text-sm md:text-base text-[var(--foreground)]/80">
                   <p className="leading-relaxed">
-                    <strong className="text-[#415a77] text-xs font-mono uppercase tracking-wider block mb-1">Focus Areas:</strong>
+                    <strong className="text-[var(--border-slate)] text-xs font-mono uppercase tracking-wider block mb-1">Focus Areas:</strong>
                     {edu.focus}
                   </p>
-                  <p className="leading-relaxed text-[#e0e1dd]/70">
-                    <strong className="text-[#415a77] text-xs font-mono uppercase tracking-wider block mb-1">Details:</strong>
+                  <p className="leading-relaxed text-[var(--foreground)]/70">
+                    <strong className="text-[var(--border-slate)] text-xs font-mono uppercase tracking-wider block mb-1">Details:</strong>
                     {edu.details}
                   </p>
                 </div>
