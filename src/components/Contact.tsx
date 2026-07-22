@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="flex-1"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[#e0e1dd] mb-4">Let's Connect</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[#e0e1dd] mb-4">Get in Touch with Harshad Dhongade</h2>
           <div className="w-20 h-1.5 bg-[#ff5d5d] rounded-full mb-8"></div>
 
           <p className="text-[#e0e1dd]/80 text-lg mb-10 leading-relaxed">

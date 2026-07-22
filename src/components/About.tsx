@@ -18,7 +18,9 @@ const About: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[#e0e1dd] mb-4">About Me</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[#e0e1dd] mb-4">
+            About Harshad Dhongade
+          </h2>
           <div className="w-20 h-1.5 bg-[#ff5d5d] mx-auto rounded-full"></div>
         </motion.div>
 
@@ -35,15 +37,15 @@ const About: React.FC = () => {
             <div className="absolute -top-32 -right-32 w-64 h-64 bg-[#ff5d5d]/10 rounded-full blur-3xl pointer-events-none"></div>
 
             <p className="text-lg leading-relaxed">
-              I am a dedicated <strong>Master of Computer Applications (MCA)</strong> student with a great interest in building high-performance, secure, and scalable web applications. My coding journey revolves around fundamental aspects of computer science, clean code practices, and modern system architectures.
+              I am <strong>Harshad Dhongade</strong>, a dedicated <strong>Master of Computer Applications (MCA)</strong> student with a passionate drive for engineering high-performance, secure, and scalable software applications. My coding journey revolves around fundamental aspects of computer science, clean architecture, and modern full-stack web development.
             </p>
 
             <p className="text-lg leading-relaxed">
-              With hands-on experience in full-stack environments, I enjoy engineering robust backend services, designing efficient relational and non-relational database schemas, and developing responsive, user-friendly frontend interfaces.
+              With hands-on experience in full-stack environments, I specialize in engineering robust backend services in Java and Node.js, designing optimized database schemas (MySQL), and building responsive, dynamic user interfaces in React and Next.js.
             </p>
 
             <p className="text-lg leading-relaxed">
-              My philosophy behind software engineering includes aspects of <strong>scalability, modularity, and efficient problem-solving</strong>. Whether structuring RESTful API middleware or resolving concurrency race conditions in database transactions, I prioritize engineering excellence, documentation, and maintainability.
+              My engineering philosophy prioritizes <strong>scalability, code modularity, and efficient problem-solving</strong>. Whether structuring RESTful API middleware or resolving complex database concurrency transactions, I aim for software excellence and maintainable architecture.
             </p>
 
             <div className="mt-8 pt-8 border-t border-[#415a77]/50 flex flex-wrap items-center gap-4 text-[#ff5d5d] text-sm font-semibold tracking-wider uppercase">
@@ -79,7 +81,9 @@ const About: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-5 space-y-3"
           >
-            <h3 className="text-2xl font-bold font-heading text-[#e0e1dd] mb-3 pl-1">My Engineering Core</h3>
+            <h3 className="text-2xl font-bold font-heading text-[#e0e1dd] mb-3 pl-1">
+              Harshad's Engineering Core
+            </h3>
 
             <div className="flex items-start gap-4 p-5 glass rounded-2xl hover-glow">
               <div className="p-3 rounded-xl bg-[#ff5d5d]/10 text-[#ff5d5d] border border-[#ff5d5d]/30">

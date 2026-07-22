@@ -91,6 +91,7 @@ const Projects: React.FC = () => {
   const toggleTab = (index: number, tab: "overview" | "system") => {
     setActiveTabs(prev => ({ ...prev, [index]: tab }));
   };
+
   const filteredProjects: Project[] = projectsData.filter(p => {
     if (filter === "All") return true;
     if (filter === "MERN") return p.tech.includes("Node.js") && p.tech.includes("React.js");
@@ -108,7 +109,9 @@ const Projects: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[#e0e1dd] mb-4">Projects</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[#e0e1dd] mb-4">
+            Featured Projects by Harshad Dhongade
+          </h2>
           <div className="w-20 h-1.5 bg-[#ff5d5d] mx-auto rounded-full mb-6"></div>
           <div className="flex flex-wrap justify-center gap-3 mb-6">
             <button onClick={() => setFilter("All")}
@@ -131,7 +134,7 @@ const Projects: React.FC = () => {
             const currentTab = activeTabs[index] || "overview";
 
             return (
-              <motion.div
+              <motion.article
                 key={project.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -143,7 +146,7 @@ const Projects: React.FC = () => {
                 <div className="h-44 overflow-hidden relative bg-[#0d1b2a]">
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} - Full Stack Software Engineering Project by Harshad Dhongade`}
                     fill
                     sizes="(max-w-768px) 100vw, (max-w-1200px) 33vw, 400px"
                     className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
@@ -274,7 +277,7 @@ const Projects: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </motion.article>
             );
           })}
         </div>

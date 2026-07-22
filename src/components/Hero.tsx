@@ -8,6 +8,7 @@ import Image from "next/image";
 
 const Hero: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 200);
@@ -15,8 +16,9 @@ const Hero: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
-    <section
+    <header
       id="home"
       className="min-h-screen pt-28 pb-16 flex items-center justify-center px-6 md:px-10 bg-gradient-to-b from-[#0d1b2a] via-[#1b263b] to-[#0d1b2a] relative overflow-hidden"
     >
@@ -39,12 +41,12 @@ const Hero: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-[#e0e1dd] mb-4 tracking-tight leading-none">
             Harshad Dhongade
           </h1>
-          <h2 className="text-2xl sm:text-3xl font-bold font-heading mb-6 text-gradient">
-            Software Engineer
-          </h2>
+          <p className="text-2xl sm:text-3xl font-bold font-heading mb-6 text-gradient">
+            Software Engineer & Full Stack Developer
+          </p>
 
           <p className="text-[#e0e1dd]/80 text-lg md:text-xl leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
-            Software Engineer specializing in building scalable full-stack web applications. Dedicated to writing clean, maintainable code, designing robust APIs, and optimizing database systems.
+            Welcome to the official portfolio of <strong>Harshad Dhongade</strong>. Software Engineer specializing in building scalable full-stack web applications, writing clean maintainable code, designing robust APIs, and optimizing database systems.
           </p>
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
@@ -61,7 +63,7 @@ const Hero: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 border border-[#415a77] bg-[#1b263b]/70 rounded-full text-[#e0e1dd] hover:text-[#ff5d5d] hover:border-[#ff5d5d] transition-all focus-visible:ring-2 focus-visible:ring-[#ff5d5d] hover-glow"
-                aria-label="GitHub Profile"
+                aria-label="Harshad Dhongade GitHub Profile"
               >
                 <FaGithub size={22} />
               </a>
@@ -70,7 +72,7 @@ const Hero: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 border border-[#415a77] bg-[#1b263b]/70 rounded-full text-[#e0e1dd] hover:text-[#ff5d5d] hover:border-[#ff5d5d] transition-all focus-visible:ring-2 focus-visible:ring-[#ff5d5d] hover-glow"
-                aria-label="LinkedIn Profile"
+                aria-label="Harshad Dhongade LinkedIn Profile"
               >
                 <FaLinkedin size={22} />
               </a>
@@ -88,7 +90,7 @@ const Hero: React.FC = () => {
           <div className="relative -ml-6 w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden shadow-2xl z-10 border-4 border-[#415a77] group-hover:border-[#ff5d5d] transition-colors duration-500">
             <Image
               src="/HD_Photo_New.jpg"
-              alt="Harshad Dhongade"
+              alt="Harshad Dhongade - Software Engineer & Full Stack Developer"
               fill
               sizes="(max-w-768px) 256px, 288px"
               priority
@@ -121,7 +123,7 @@ const Hero: React.FC = () => {
           <ArrowUp size={24} />
         </button>
       )}
-    </section>
+    </header>
   );
 };
 

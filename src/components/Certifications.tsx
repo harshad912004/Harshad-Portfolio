@@ -84,9 +84,9 @@ const Certifications: React.FC = () => {
                 </div>
 
                 <div>
-                  <h2 className="text-lg font-bold font-heading text-[#e0e1dd] leading-snug hover:text-[#ff5d5d] transition-colors">
+                  <h3 className="text-lg font-bold font-heading text-[#e0e1dd] leading-snug hover:text-[#ff5d5d] transition-colors">
                     {cert.title}
-                  </h2>
+                  </h3>
                   <p className="text-m text-[#e0e1dd]/70 font-medium mt-1">{cert.issuer}</p>
                 </div>
               </div>

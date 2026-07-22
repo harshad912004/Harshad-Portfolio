@@ -54,13 +54,13 @@ const Experience: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[#e0e1dd] mb-4">Work Experience</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[#e0e1dd] mb-4">Work Experience of Harshad Dhongade</h2>
           <div className="w-20 h-1.5 bg-[#ff5d5d] mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="relative border-l-2 border-[#415a77] ml-4 md:ml-6 pl-8 space-y-12">
           {experienceData.map((exp, index) => (
-            <motion.div
+            <motion.article
               key={exp.role}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -107,7 +107,7 @@ const Experience: React.FC = () => {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>
